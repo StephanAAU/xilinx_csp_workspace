@@ -6,3 +6,4 @@
 1650452350703	Move 'csp_autoconfig.h' to 'csp'
 1650452446082	Move 'csp_autoconfig.h' to 'lib'
 1650454379999	Rename resource 'csp_hook_asf4.c'
+1650455076363	Rename resource 'freertos_hello_world.c'

@@ -1,4 +1,4 @@
-13:33:30 **** Incremental Build of configuration Debug for project test_system ****
+14:00:54 **** Incremental Build of configuration Debug for project test_system ****
 make all 
 Generating bif file for the system project
 generate_system_bif.bat 56803 C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/csptest.xpfm freertos10_xilinx_domain C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test_system/Debug/system.bif
@@ -6,5 +6,5 @@ sdcard_gen --xpfm C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/exp
 creating BOOT.BIN using C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
 Running C:/Xilinx/Vitis/2021.2/bin/bootgen  -image C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-13:33:37 Build Finished (took 6s.332ms)
+14:00:59 Build Finished (took 5s.713ms)
 

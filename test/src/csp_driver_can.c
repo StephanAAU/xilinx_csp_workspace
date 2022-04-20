@@ -27,18 +27,9 @@
 #include <csp/include/csp/csp_debug.h>
 #include <csp/include/csp/interfaces/csp_if_can.h>
 
-// Code for ATSAME driver.
-//#include <driver_init.h>
-//#include <hal_can_async.h>
-
 #include <FreeRTOS.h>
 #include <semphr.h>
 #include <task.h>
-
-// Code for ATSAME driver
-//#include <drivers/csp_driver_can.h>
-//#include <drivers/sn65hvd230.h>
-
 
 #ifdef REFERENCE_DESIGN
 #ifndef CAN_DEFER_TASK
