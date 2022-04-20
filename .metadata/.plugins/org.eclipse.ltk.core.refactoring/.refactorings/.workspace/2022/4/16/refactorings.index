@@ -1,0 +1,6 @@
+1650452626875	Delete resource 'test/lib/csp/src/bindings'
+1650452641624	Delete resource 'test/lib/csp/src/drivers'
+1650452690653	Delete resource 'test/lib/csp/src/interfaces/csp_if_udp.c'
+1650452718985	Delete 2 resources
+1650452920686	Delete resource 'test/lib/csp/include/csp/interfaces/csp_if_udp.h'
+1650452969231	Delete resource 'test/lib/csp/src/csp_yaml.c'

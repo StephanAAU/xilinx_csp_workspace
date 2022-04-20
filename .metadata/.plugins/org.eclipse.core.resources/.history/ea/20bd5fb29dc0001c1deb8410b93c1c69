@@ -1,0 +1,12 @@
+// Xilinx framework
+
+void csp_reboot_hook(void) {
+    while (1) {
+    }
+    }
+}
+
+void csp_shutdown_hook(void) {
+    NVIC_SystemReset();
+}
+

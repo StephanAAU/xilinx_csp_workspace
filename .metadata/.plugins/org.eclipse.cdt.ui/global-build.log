@@ -1,0 +1,31 @@
+Nothing to build in platform 'csptest'
+
+13:33:29 **** Incremental Build of configuration Debug for project test ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/csp_hook_xil.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test\lib" -I"C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test\lib\csp\include" -c -fmessage-length=0 -MT"src/csp_hook_xil.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/csp_hook_xil.d" -MT"src/csp_hook_xil.o" -o "src/csp_hook_xil.o" "../src/csp_hook_xil.c"
+'Finished building: ../src/csp_hook_xil.c'
+' '
+'Building target: test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -LC:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bsplib/lib -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -o "test.elf"  ./src/csp_driver_can.o ./src/csp_hook_xil.o ./src/freertos_hello_world.o ./src/staticrtos.o  ./lib/csp/src/interfaces/csp_if_can.o ./lib/csp/src/interfaces/csp_if_can_pbuf.o ./lib/csp/src/interfaces/csp_if_i2c.o ./lib/csp/src/interfaces/csp_if_lo.o ./lib/csp/src/interfaces/csp_if_tun.o ./lib/csp/src/interfaces/csp_if_zmqhub.o  ./lib/csp/src/crypto/csp_hmac.o ./lib/csp/src/crypto/csp_sha1.o  ./lib/csp/src/arch/freertos/csp_clock.o ./lib/csp/src/arch/freertos/csp_queue.o ./lib/csp/src/arch/freertos/csp_semaphore.o ./lib/csp/src/arch/freertos/csp_system.o ./lib/csp/src/arch/freertos/csp_time.o  ./lib/csp/src/csp_bridge.o ./lib/csp/src/csp_buffer.o ./lib/csp/src/csp_conn.o ./lib/csp/src/csp_crc32.o ./lib/csp/src/csp_debug.o ./lib/csp/src/csp_dedup.o ./lib/csp/src/csp_hex_dump.o ./lib/csp/src/csp_id.o ./lib/csp/src/csp_iflist.o ./lib/csp/src/csp_init.o ./lib/csp/src/csp_io.o ./lib/csp/src/csp_port.o ./lib/csp/src/csp_promisc.o ./lib/csp/src/csp_qfifo.o ./lib/csp/src/csp_rdp.o ./lib/csp/src/csp_rdp_queue.o ./lib/csp/src/csp_route.o ./lib/csp/src/csp_rtable_cidr.o ./lib/csp/src/csp_rtable_stdio.o ./lib/csp/src/csp_service_handler.o ./lib/csp/src/csp_services.o ./lib/csp/src/csp_sfp.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test.elf  |tee "test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 170082	  10516	  92272	 272870	  429e6	test.elf
+'Finished building: test.elf.size'
+' '
+13:33:30 **** Incremental Build of configuration Debug for project test_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 56803 C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/csptest.xpfm freertos10_xilinx_domain C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test_system/Debug/system.bif
+sdcard_gen --xpfm C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/csptest.xpfm --sys_config csptest --bif C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test_system/Debug/system.bif --bitstream C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit --elf C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+Running C:/Xilinx/Vitis/2021.2/bin/bootgen  -image C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

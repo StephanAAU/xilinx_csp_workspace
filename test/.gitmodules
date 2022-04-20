@@ -1,0 +1,3 @@
+[submodule "lib/xil_libcsp"]
+	path = lib/xil_libcsp
+	url = https://github.com/StephanAAU/xil_libcsp.git
