@@ -1,0 +1,69 @@
+/*
+    Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+    Copyright (c) 2012 - 2020 Xilinx, Inc. All Rights Reserved.
+	SPDX-License-Identifier: MIT
+
+
+    http://www.FreeRTOS.org
+    http://aws.amazon.com/freertos
+
+
+    1 tab == 4 spaces!
+*/
+
+/* FreeRTOS includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "timers.h"
+/* Xilinx includes. */
+#include "xil_printf.h"
+#include "xparameters.h"
+
+// Static memory allocation functions
+#include "staticrtos.h"
+
+#define DELAY_10_SECONDS	10000UL
+#define DELAY_1_SECOND		1000UL
+
+/*-----------------------------------------------------------*/
+static void vIdleTask( TimerHandle_t pxTimer );
+/*-----------------------------------------------------------*/
+
+/* The queue used by the Tx and Rx tasks, as described at the top of this
+file. */
+static TaskHandle_t xIdleTask;
+
+int main( void )
+{
+	const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+
+	xil_printf( "Booting...\r\n" );
+
+	xTaskCreate(vIdleTask, "Idle task", 200, pvParameters, uxPriority, pxCreatedTask)
+
+	/* Start the tasks and timer running. */
+	vTaskStartScheduler();
+
+	/* If all is well, the scheduler will now be running, and the following line
+	will never be reached.  If the following line does execute, then there was
+	insufficient FreeRTOS heap memory available for the idle and/or timer tasks
+	to be created.  See the memory management section on the FreeRTOS web site
+	for more details. */
+	for( ;; );
+}
+
+
+/*-----------------------------------------------------------*/
+static void vIdleTask( TimerHandle_t pxTimer )
+{
+	const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+
+	for( ;; )
+	{
+		/* Delay for 1 second. */
+		vTaskDelay( x1second );
+		xil_printf("hello..\r\n");
+	}
+}
+

@@ -1,0 +1,20 @@
+#include "xscugic.h"
+
+#define INTC				XScuGic
+#define CAN_DEVICE_ID		XPAR_XCANPS_0_DEVICE_ID
+#define INTC_DEVICE_ID		XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define CAN_INTR_VEC_ID		XPAR_XCANPS_0_INTR
+
+#define XCANPS_MAX_FRAME_SIZE_IN_WORDS (XCANPS_MAX_FRAME_SIZE / sizeof(u32))
+#define FRAME_DATA_LENGTH	8 /* Frame Data field length */
+
+XCanPs_Config *ConfigPtr;
+
+#define TEST_BTR_SYNCJUMPWIDTH		0
+#define TEST_BTR_FIRST_TIMESEGMENT	7
+#define TEST_BTR_SECOND_TIMESEGMENT	2
+#define TEST_BRPR_BAUD_PRESCALAR	3
+
+static XCanPs CanInstance;    			/* Instance of the Can driver */
+static INTC IntcInstance; 				/* Instance of the Interrupt Controller driver */
+extern XScuGic xInterruptController;

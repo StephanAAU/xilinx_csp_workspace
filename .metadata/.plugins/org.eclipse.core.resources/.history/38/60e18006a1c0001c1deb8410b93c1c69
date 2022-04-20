@@ -1,0 +1,1 @@
+int CanPsIntrSetup(INTC *IntcInstPtr, XCanPs *CanInstPtr, u16 CanDeviceId, u16 CanIntrId);
