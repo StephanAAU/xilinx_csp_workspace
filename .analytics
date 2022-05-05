@@ -488,3 +488,6 @@ timestamp=[2022-05-05 11:59:06], mode=BUILD, duration=0:00:01.187, duration_ms=1
 timestamp=[2022-05-05 11:59:10], mode=BUILD, duration=0:00:01.122, duration_ms=1122, data={name=test, configuration=Debug, clean_build=false}
 timestamp=[2022-05-05 11:59:18], mode=BUILD, duration=0:00:01.914, duration_ms=1914, data={name=test, configuration=Debug, clean_build=false}
 timestamp=[2022-05-05 11:59:18], mode=BUILD, duration=0:00:00.125, duration_ms=125, data={name=test_system, configuration=Debug, clean_build=false}
+timestamp=[2022-05-05 15:19:13], mode=WORKBENCH_START, duration=0:00:07.794, duration_ms=7794, data={}
+timestamp=[2022-05-05 15:19:14], mode=WORKBENCH_UI_INIT, duration=0:00:01.568, duration_ms=1568, data={editors_count=6, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,csptest,test,test_system}
+timestamp=[2022-05-05 15:19:15], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.200, duration_ms=200, data={}

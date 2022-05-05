@@ -15866,3 +15866,42 @@ java.io.FileNotFoundException: C:\School\Vivado\ZynqDemoRemake\workspace_csp_tes
 	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2333)
 	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:509)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2022-05-05 15:19:03.663 -----------------------------------------------
+eclipse.buildId=2021.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=da_DK
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\School\Vivado\ZynqDemoRemake\workspace_csp_test
+
+!ENTRY org.eclipse.ui 4 4 2022-05-05 15:19:08.842
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-05-05 15:19:14.748
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-21
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-05-05 15:19:14.748
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-05-05 15:19:14.763
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-21
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-05-05 15:19:14.775
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-9
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-05-05 15:19:14.790
+!MESSAGE XSCT Command: [setws C:/School/Vivado/ZynqDemoRemake/workspace_csp_test], Thread: Thread-21
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-05-05 15:19:14.794
+!MESSAGE XSCT command with result: [setws C:/School/Vivado/ZynqDemoRemake/workspace_csp_test], Result: [null, ]. Thread: Thread-21
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-05-05 15:19:15.112
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-05-05 15:19:15.684
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-05-05 15:19:15.685
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-1: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-05-05 15:19:15.686
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2021.2/data]. Thread: Worker-1: Initializing s/w repositories
