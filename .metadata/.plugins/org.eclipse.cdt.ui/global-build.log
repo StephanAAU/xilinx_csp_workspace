@@ -1,6 +1,6 @@
 Nothing to build in platform 'csptest'
 
-14:34:04 **** Incremental Build of configuration Debug for project test ****
+13:28:22 **** Incremental Build of configuration Debug for project test ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -9,38 +9,55 @@ make --no-print-directory main-build
 'Building file: ../src/main.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\StephanTheGit\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\StephanTheGit\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:24:
+In file included from ../src/main.c:26:
 ../src/can_driver.h:20:1: warning: data definition has no type or storage class
    20 | csp_driver_can_init(int addr, int netmask, uint32_t bitrate);
       | ^~~~~~~~~~~~~~~~~~~
 ../src/can_driver.h:20:1: warning: type defaults to 'int' in declaration of 'csp_driver_can_init' [-Wimplicit-int]
 ../src/main.c: In function 'main':
-../src/main.c:50:2: warning: implicit declaration of function 'csp_iface_can_init'; did you mean 'csp_driver_can_init'? [-Wimplicit-function-declaration]
-   50 |  csp_iface_can_init(0x1c3f, 0, 500000);
+../src/main.c:52:2: warning: implicit declaration of function 'csp_iface_can_init'; did you mean 'csp_driver_can_init'? [-Wimplicit-function-declaration]
+   52 |  csp_iface_can_init(0x1c3f, 0, 500000);
       |  ^~~~~~~~~~~~~~~~~~
       |  csp_driver_can_init
-../src/main.c:57:2: warning: implicit declaration of function 'cspSender' [-Wimplicit-function-declaration]
-   57 |  cspSender(stuffToSend, 12, 0x1c1f, 0xf, 0xf, 0x1d);
-      |  ^~~~~~~~~
-../src/main.c:65:2: warning: "/*" within comment [-Wcomment]
-   65 |  /* Intialize the interface of the can device*/
+../src/main.c:67:2: warning: "/*" within comment [-Wcomment]
+   67 |  /* Intialize the interface of the can device*/
       |   
-../src/main.c:69:34: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
-   69 |  xIdleTaskCreation = xTaskCreate(vIdleTask, "Idle task", 200, NULL, 5, &xIdleTask);
-      |                                  ^~~~~~~~~
-      |                                  |
-      |                                  void (*)(struct tmrTimerControl *)
-In file included from ../src/main.c:7:
-C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include/task.h:340:44: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(struct tmrTimerControl *)'
-  340 |     BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
-      |                             ~~~~~~~~~~~~~~~^~~~~~~~~~
-../src/main.c:69:20: warning: assignment to 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'} from 'BaseType_t' {aka 'long int'} makes pointer from integer without a cast [-Wint-conversion]
-   69 |  xIdleTaskCreation = xTaskCreate(vIdleTask, "Idle task", 200, NULL, 5, &xIdleTask);
-      |                    ^
-../src/main.c:41:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
-   41 |  int Status;
+../src/main.c:43:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+   43 |  int Status;
       |      ^~~~~~
-In file included from ../src/main.c:24:
+../src/main.c: In function 'vIdleTask':
+../src/main.c:102:11: warning: format '%x' expects argument of type 'unsigned int *', but argument 2 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+  102 |   scanf("%x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
+      |          ~^            ~~~~~~~~~~~~~~
+      |           |            |
+      |           |            uint8_t * {aka unsigned char *}
+      |           unsigned int *
+      |          %hhx
+../src/main.c:102:14: warning: format '%x' expects argument of type 'unsigned int *', but argument 3 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+  102 |   scanf("%x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
+      |             ~^                         ~~~~~~~~~~~~~~
+      |              |                         |
+      |              unsigned int *            uint8_t * {aka unsigned char *}
+      |             %hhx
+../src/main.c:102:17: warning: format '%x' expects argument of type 'unsigned int *', but argument 4 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+  102 |   scanf("%x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
+      |                ~^                                      ~~~~~~~~~~~~~~
+      |                 |                                      |
+      |                 unsigned int *                         uint8_t * {aka unsigned char *}
+      |                %hhx
+../src/main.c:102:20: warning: format '%x' expects argument of type 'unsigned int *', but argument 5 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+  102 |   scanf("%x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
+      |                   ~^                                                   ~~~~~~~~~~~~~~
+      |                    |                                                   |
+      |                    unsigned int *                                      uint8_t * {aka unsigned char *}
+      |                   %hhx
+../src/main.c:112:3: warning: implicit declaration of function 'cspSender' [-Wimplicit-function-declaration]
+  112 |   cspSender(dataToSend, 4, 0x1c1f, 0x0f, 0x0f, 0x1d);
+      |   ^~~~~~~~~
+../src/main.c:90:14: warning: unused variable 'inputQueue' [-Wunused-variable]
+   90 |  csp_qfifo_t inputQueue;
+      |              ^~~~~~~~~~
+In file included from ../src/main.c:26:
 ../src/main.c: At top level:
 ../src/can_driver.h:10:13: warning: 'RecvHandler' declared 'static' but never defined [-Wunused-function]
    10 | static void RecvHandler(void *CallBackRef);
@@ -58,13 +75,13 @@ arm-none-eabi-gcc -LC:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/ex
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 179420	  37328	  92768	 309516	  4b90c	test.elf
+ 185868	  37328	  92768	 315964	  4d23c	test.elf
 'Finished building: test.elf.size'
 ' '
-14:34:10 **** Incremental Build of configuration Debug for project test_system ****
+13:28:27 **** Incremental Build of configuration Debug for project test_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 50240 C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/export/csptest/csptest.xpfm freertos10_xilinx_domain C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test_system/Debug/system.bif
+generate_system_bif.bat 52926 C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/export/csptest/csptest.xpfm freertos10_xilinx_domain C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test_system/Debug/system.bif
 sdcard_gen --xpfm C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/export/csptest/csptest.xpfm --sys_config csptest --bif C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test_system/Debug/system.bif --bitstream C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test/_ide/bitstream/zsys_wrapper.bit --elf C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test/Debug/test.elf,ps7_cortexa9_0
 creating BOOT.BIN using C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test/_ide/bitstream/zsys_wrapper.bit
 Running C:/Xilinx/Vitis/2021.2/bin/bootgen  -image C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

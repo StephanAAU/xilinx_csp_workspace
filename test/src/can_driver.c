@@ -583,18 +583,16 @@ void csp_iface_can_init(int addr, int netmask, uint32_t bitrate) {
 	/* Create a mutex type semaphore. */
 	 xilCanInt.lock = xSemaphoreCreateBinary();
 
-	const csp_conf_t *csp_conf = csp_get_conf();
-
 	xilCanInt.ifdata.tx_func = canHopper;
 
 
-	/* The MTU is configured run-time, since the buffer size can be configured externally
-	 * however, it must not exceed 2042 due to the CFP_REMAIN field limitation
-	 * CFP_REMAIN gives possibility of 255 * 8 bytes = 2040
-	 * CSP_BEGIN frame, has two additional bytes, in total 2042 */
-     xilCanInt.interface.mtu = CSP_BUFFER_SIZE; // Changed to 2042, instead of meson build from ubuntu 256.
-	if ( xilCanInt.interface.mtu > 2042) {
-		 xilCanInt.interface.mtu = 2042;
+	/* The MTU of the CAN system is limited by the number of bits in the fragmentation counter
+	 * As there are 3 bits in the fragmentation field the number of fragments possible is
+	 * (2^4)-1=15.
+	 * The MTU is thus 15*8-4=116, as the first frame is used for the CAN header extention.*/
+     xilCanInt.interface.mtu = CSP_BUFFER_SIZE;
+	if ( xilCanInt.interface.mtu > 116) {
+		 xilCanInt.interface.mtu = 116;
 	}
 
 	 xilCanInt.ifdata.pbufs = NULL;

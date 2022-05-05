@@ -4,7 +4,7 @@
 #pragma once
 
 #define CSP_BUFFER_COUNT 15
-#define CSP_BUFFER_SIZE 2042
+#define CSP_BUFFER_SIZE 116
 #define CSP_CONN_MAX 8
 #define CSP_CONN_RXQUEUE_LEN 15
 #define CSP_ENABLE_CSP_PRINT 1

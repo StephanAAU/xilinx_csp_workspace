@@ -2,6 +2,8 @@
 	Test implementation of CAN and CSP.
 */
 
+#include <stdio.h>
+
 // FreeRTOS includes.
 #include "FreeRTOS.h"
 #include "task.h"
@@ -27,7 +29,7 @@
 #define DELAY_1_SECOND		1000UL
 
 /*-----------------------------------------------------------*/
-static void vIdleTask( TimerHandle_t pxTimer );
+static void vIdleTask( void *pvParameters );
 /*-----------------------------------------------------------*/
 
 
@@ -52,9 +54,9 @@ int main( void )
 
 	//xilSendLongCFPFrame(0x1C3B, 0x0F, 0x0F, 0x1D, &Test);
 
-	uint8_t stuffToSend[12] = {0x11,0x22,0x33,0x44,0x55,0x66,0x77,0x88, 0x99, 0xAA, 0xBB, 0xCC};
+	//uint8_t stuffToSend[12] = {0x11,0x22,0x33,0x44,0x55,0x66,0x77,0x88, 0x99, 0xAA, 0xBB, 0xCC};
 
-	cspSender(stuffToSend, 12, 0x1c1f, 0xf, 0xf, 0x1d);
+	//cspSender(stuffToSend, 12, 0x1c1f, 0xf, 0xf, 0x1d);
 
 	/*
 	if (Status != XST_SUCCESS) {
@@ -66,7 +68,7 @@ int main( void )
 	/*
 	csp_driver_can_init(1, 5, 500000);
 	*/
-	xIdleTaskCreation = xTaskCreate(vIdleTask, "Idle task", 200, NULL, 5, &xIdleTask);
+	xTaskCreate(vIdleTask, "Idle task", 2000, NULL, 5, &xIdleTask);
 
 
 	/* Start the tasks and timer running. */
@@ -83,7 +85,7 @@ int main( void )
 
 
 /*-----------------------------------------------------------*/
-static void vIdleTask( TimerHandle_t pxTimer )
+static void vIdleTask( void *pvParameters )
 {
 	csp_qfifo_t inputQueue;
 
@@ -95,12 +97,19 @@ static void vIdleTask( TimerHandle_t pxTimer )
 		vTaskDelay( x1second );
 		xil_printf("%d..\r\n", cntr);
 		cntr++;
+		uint8_t dataToSend[4] = {0,0,0,0};
+
+		scanf("%x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
+
+		/*
 		if (csp_qfifo_read(&inputQueue) == 0){
 			xil_printf("There was something to read");
 
 		} else{
 			xil_printf("qfifo nothing to read");
-		}
+		}*/
+
+		cspSender(dataToSend, 4, 0x1c1f, 0x0f, 0x0f, 0x1d);
 
 	}
 }

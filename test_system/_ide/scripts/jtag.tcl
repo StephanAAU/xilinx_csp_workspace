@@ -25,4 +25,5 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test/Debug/test.elf
 configparams force-mem-access 0
-bpadd -addr &main
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
