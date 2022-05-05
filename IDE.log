@@ -247,6 +247,7 @@ con
 ----------------End of Script----------------
 
 14:01:14 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+<<<<<<< HEAD
 08:10:21 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\XilinxStuuf\StephanTheGit\xilinx_csp_workspace\temp_xsdb_launch_script.tcl
 08:10:28 ERROR : Error encountered while initializing user repository paths
 Reason: No Platforms Found.
@@ -4783,3 +4784,14 @@ con
 09:30:20 INFO  : Successfully done setting XSCT server connection channel  
 09:30:20 INFO  : Successfully done query RDI_DATADIR 
 09:30:20 INFO  : Successfully done setting workspace for the tool. 
+=======
+15:30:36 INFO  : Disconnected from the channel tcfchan#10.
+08:22:02 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\temp_xsdb_launch_script.tcl
+08:22:07 INFO  : Registering command handlers for Vitis TCF services
+08:22:07 INFO  : XSCT server has started successfully.
+08:22:07 INFO  : Platform repository initialization has completed.
+08:22:11 INFO  : plnx-install-location is set to ''
+08:22:11 INFO  : Successfully done setting XSCT server connection channel  
+08:22:11 INFO  : Successfully done query RDI_DATADIR 
+08:22:11 INFO  : Successfully done setting workspace for the tool. 
+>>>>>>> ee15a31179298eb0156db6a07ed731cb4434ae18
