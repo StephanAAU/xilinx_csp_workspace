@@ -4783,3 +4783,684 @@ con
 09:30:20 INFO  : Successfully done setting XSCT server connection channel  
 09:30:20 INFO  : Successfully done query RDI_DATADIR 
 09:30:20 INFO  : Successfully done setting workspace for the tool. 
+10:17:31 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\temp_xsdb_launch_script.tcl
+10:17:38 INFO  : Registering command handlers for Vitis TCF services
+10:17:39 INFO  : Platform repository initialization has completed.
+10:17:39 INFO  : XSCT server has started successfully.
+10:17:40 INFO  : plnx-install-location is set to ''
+10:17:40 INFO  : Successfully done setting XSCT server connection channel  
+10:17:40 INFO  : Successfully done setting workspace for the tool. 
+10:17:40 INFO  : Successfully done query RDI_DATADIR 
+10:18:09 INFO  : Result from executing command 'getProjects': csptest
+10:18:09 INFO  : Result from executing command 'getPlatforms': csptest|C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/csptest.xpfm
+10:18:09 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+10:18:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:18:52 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+10:18:54 INFO  : 'jtag frequency' command is executed.
+10:18:54 INFO  : Context for 'APU' is selected.
+10:18:54 INFO  : System reset is completed.
+10:18:57 INFO  : 'after 3000' command is executed.
+10:18:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+10:18:59 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+10:18:59 INFO  : Context for 'APU' is selected.
+10:19:01 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+10:19:01 INFO  : 'configparams force-mem-access 1' command is executed.
+10:19:01 INFO  : Context for 'APU' is selected.
+10:19:01 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+10:19:13 INFO  : 'ps7_init' command is executed.
+10:19:13 INFO  : 'ps7_post_config' command is executed.
+10:19:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:19:15 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:19:17 INFO  : 'configparams force-mem-access 0' command is executed.
+10:19:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:19:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:19:21 INFO  : 'con' command is executed.
+10:19:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:19:21 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+10:26:32 INFO  : Disconnected from the channel tcfchan#3.
+10:26:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:26:34 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+10:26:36 INFO  : 'jtag frequency' command is executed.
+10:26:39 ERROR : no targets found with "name =~"APU*"". available targets: none
+10:26:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+----------------End of Script----------------
+
+10:26:39 ERROR : no targets found with "name =~"APU*"". available targets: none
+10:26:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:26:47 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+10:26:50 INFO  : 'jtag frequency' command is executed.
+10:26:50 INFO  : Context for 'APU' is selected.
+10:26:50 INFO  : System reset is completed.
+10:26:53 INFO  : 'after 3000' command is executed.
+10:26:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+10:26:55 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+10:26:55 INFO  : Context for 'APU' is selected.
+10:26:55 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+10:26:55 INFO  : 'configparams force-mem-access 1' command is executed.
+10:26:55 INFO  : Context for 'APU' is selected.
+10:26:55 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+10:27:01 INFO  : 'ps7_init' command is executed.
+10:27:03 INFO  : 'ps7_post_config' command is executed.
+10:27:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:27:04 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:27:06 INFO  : 'configparams force-mem-access 0' command is executed.
+10:27:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:27:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:27:10 INFO  : 'con' command is executed.
+10:27:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:27:10 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+10:40:09 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+10:42:37 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+10:42:47 INFO  : Disconnected from the channel tcfchan#4.
+10:42:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:42:49 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+10:42:51 INFO  : 'jtag frequency' command is executed.
+10:42:51 INFO  : Context for 'APU' is selected.
+10:42:51 INFO  : System reset is completed.
+10:42:54 INFO  : 'after 3000' command is executed.
+10:42:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:42:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+10:42:57 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+10:42:57 INFO  : Context for 'APU' is selected.
+10:42:57 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+10:42:57 INFO  : 'configparams force-mem-access 1' command is executed.
+10:42:57 INFO  : Context for 'APU' is selected.
+10:42:58 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+10:43:11 INFO  : 'ps7_init' command is executed.
+10:43:15 INFO  : 'ps7_post_config' command is executed.
+10:43:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:43:20 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:43:20 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+10:43:22 INFO  : 'configparams force-mem-access 0' command is executed.
+10:43:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:43:24 INFO  : 'jtag frequency' command is executed.
+10:43:28 INFO  : Context for 'APU' is selected.
+10:43:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:43:28 INFO  : System reset is completed.
+10:43:30 ERROR : Already running
+10:43:33 INFO  : 'after 3000' command is executed.
+10:43:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+10:43:37 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+10:43:37 INFO  : Context for 'APU' is selected.
+10:43:37 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+10:43:37 INFO  : 'configparams force-mem-access 1' command is executed.
+10:43:37 INFO  : Context for 'APU' is selected.
+10:43:37 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+10:43:49 INFO  : 'ps7_init' command is executed.
+10:43:49 INFO  : 'ps7_post_config' command is executed.
+10:43:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:43:51 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:43:51 INFO  : 'configparams force-mem-access 0' command is executed.
+10:43:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:43:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:43:57 INFO  : 'con' command is executed.
+10:43:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:43:57 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+10:45:09 INFO  : Result from executing command 'getProjects': csptest
+10:45:09 INFO  : Result from executing command 'getPlatforms': csptest|C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/csptest.xpfm
+10:45:09 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+10:46:47 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+10:47:03 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+10:47:07 INFO  : Disconnected from the channel tcfchan#7.
+10:47:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:47:10 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+10:47:11 INFO  : 'jtag frequency' command is executed.
+10:47:11 INFO  : Context for 'APU' is selected.
+10:47:11 INFO  : System reset is completed.
+10:47:14 INFO  : 'after 3000' command is executed.
+10:47:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+10:47:16 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+10:47:16 INFO  : Context for 'APU' is selected.
+10:47:16 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+10:47:18 INFO  : 'configparams force-mem-access 1' command is executed.
+10:47:18 INFO  : Context for 'APU' is selected.
+10:47:18 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+10:47:22 INFO  : 'ps7_init' command is executed.
+10:47:24 INFO  : 'ps7_post_config' command is executed.
+10:47:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:47:27 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:47:29 INFO  : 'configparams force-mem-access 0' command is executed.
+10:47:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:47:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:47:35 INFO  : 'con' command is executed.
+10:47:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:47:35 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+10:53:25 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+10:53:30 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+10:53:59 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+10:56:18 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+10:56:35 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:04:37 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:04:49 INFO  : Disconnected from the channel tcfchan#11.
+11:04:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:04:54 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+11:04:56 INFO  : 'jtag frequency' command is executed.
+11:04:56 INFO  : Context for 'APU' is selected.
+11:04:56 INFO  : System reset is completed.
+11:04:59 INFO  : 'after 3000' command is executed.
+11:05:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+11:05:00 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+11:05:00 INFO  : Context for 'APU' is selected.
+11:05:00 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+11:05:00 INFO  : 'configparams force-mem-access 1' command is executed.
+11:05:02 INFO  : Context for 'APU' is selected.
+11:05:02 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+11:05:08 INFO  : 'ps7_init' command is executed.
+11:05:10 INFO  : 'ps7_post_config' command is executed.
+11:05:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:05:13 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:05:15 INFO  : 'configparams force-mem-access 0' command is executed.
+11:05:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:05:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:05:19 INFO  : 'con' command is executed.
+11:05:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:05:19 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+11:05:52 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:05:59 INFO  : Disconnected from the channel tcfchan#12.
+11:06:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:06:01 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+11:06:03 INFO  : 'jtag frequency' command is executed.
+11:06:03 INFO  : Context for 'APU' is selected.
+11:06:03 INFO  : System reset is completed.
+11:06:06 INFO  : 'after 3000' command is executed.
+11:06:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+11:06:08 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+11:06:08 INFO  : Context for 'APU' is selected.
+11:06:08 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+11:06:08 INFO  : 'configparams force-mem-access 1' command is executed.
+11:06:08 INFO  : Context for 'APU' is selected.
+11:06:08 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+11:06:16 INFO  : 'ps7_init' command is executed.
+11:06:16 INFO  : 'ps7_post_config' command is executed.
+11:06:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:06:18 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:06:20 INFO  : 'configparams force-mem-access 0' command is executed.
+11:06:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:06:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:06:24 INFO  : 'con' command is executed.
+11:06:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:06:24 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+11:07:11 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:07:20 INFO  : Disconnected from the channel tcfchan#13.
+11:07:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:07:22 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+11:07:24 INFO  : 'jtag frequency' command is executed.
+11:07:24 INFO  : Context for 'APU' is selected.
+11:07:24 INFO  : System reset is completed.
+11:07:27 INFO  : 'after 3000' command is executed.
+11:07:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+11:07:29 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+11:07:29 INFO  : Context for 'APU' is selected.
+11:07:29 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+11:07:29 INFO  : 'configparams force-mem-access 1' command is executed.
+11:07:31 INFO  : Context for 'APU' is selected.
+11:07:31 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+11:07:37 INFO  : 'ps7_init' command is executed.
+11:07:39 INFO  : 'ps7_post_config' command is executed.
+11:07:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:07:41 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:07:43 INFO  : 'configparams force-mem-access 0' command is executed.
+11:07:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:07:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:07:47 INFO  : 'con' command is executed.
+11:07:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:07:47 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+11:07:56 INFO  : Disconnected from the channel tcfchan#14.
+11:07:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:07:59 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+11:08:01 INFO  : 'jtag frequency' command is executed.
+11:08:01 INFO  : Context for 'APU' is selected.
+11:08:01 INFO  : System reset is completed.
+11:08:04 INFO  : 'after 3000' command is executed.
+11:08:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+11:08:06 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+11:08:06 INFO  : Context for 'APU' is selected.
+11:08:06 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+11:08:06 INFO  : 'configparams force-mem-access 1' command is executed.
+11:08:06 INFO  : Context for 'APU' is selected.
+11:08:06 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+11:08:18 INFO  : 'ps7_init' command is executed.
+11:08:20 INFO  : 'ps7_post_config' command is executed.
+11:08:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:08:22 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:08:24 INFO  : 'configparams force-mem-access 0' command is executed.
+11:08:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:08:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:08:28 INFO  : 'con' command is executed.
+11:08:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:08:28 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+11:08:48 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:08:55 INFO  : Disconnected from the channel tcfchan#15.
+11:08:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:08:56 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+11:08:58 INFO  : 'jtag frequency' command is executed.
+11:08:58 INFO  : Context for 'APU' is selected.
+11:08:58 INFO  : System reset is completed.
+11:09:01 INFO  : 'after 3000' command is executed.
+11:09:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+11:09:03 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+11:09:03 INFO  : Context for 'APU' is selected.
+11:09:03 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+11:09:05 INFO  : 'configparams force-mem-access 1' command is executed.
+11:09:05 INFO  : Context for 'APU' is selected.
+11:09:05 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+11:09:17 INFO  : 'ps7_init' command is executed.
+11:09:17 INFO  : 'ps7_post_config' command is executed.
+11:09:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:09:21 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:09:23 INFO  : 'configparams force-mem-access 0' command is executed.
+11:09:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:09:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:09:27 INFO  : 'con' command is executed.
+11:09:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:09:27 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+11:10:23 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:10:28 INFO  : Disconnected from the channel tcfchan#16.
+11:10:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:10:31 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+11:10:33 INFO  : 'jtag frequency' command is executed.
+11:10:33 INFO  : Context for 'APU' is selected.
+11:10:33 INFO  : System reset is completed.
+11:10:36 INFO  : 'after 3000' command is executed.
+11:10:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+11:10:38 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+11:10:38 INFO  : Context for 'APU' is selected.
+11:10:40 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+11:10:40 INFO  : 'configparams force-mem-access 1' command is executed.
+11:10:40 INFO  : Context for 'APU' is selected.
+11:10:40 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+11:10:52 INFO  : 'ps7_init' command is executed.
+11:10:52 INFO  : 'ps7_post_config' command is executed.
+11:10:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:10:56 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:10:58 INFO  : 'configparams force-mem-access 0' command is executed.
+11:10:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:11:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:11:02 INFO  : 'con' command is executed.
+11:11:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:11:02 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+11:13:05 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:13:28 INFO  : Disconnected from the channel tcfchan#17.
+11:13:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:13:29 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+11:13:31 INFO  : 'jtag frequency' command is executed.
+11:13:31 INFO  : Context for 'APU' is selected.
+11:13:31 INFO  : System reset is completed.
+11:13:34 INFO  : 'after 3000' command is executed.
+11:13:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+11:13:36 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+11:13:36 INFO  : Context for 'APU' is selected.
+11:13:36 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+11:13:38 INFO  : 'configparams force-mem-access 1' command is executed.
+11:13:38 INFO  : Context for 'APU' is selected.
+11:13:38 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+11:13:46 INFO  : 'ps7_init' command is executed.
+11:13:48 INFO  : 'ps7_post_config' command is executed.
+11:13:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:13:51 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:13:53 INFO  : 'configparams force-mem-access 0' command is executed.
+11:13:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:13:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:13:56 INFO  : 'con' command is executed.
+11:13:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:13:56 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+11:51:02 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:51:08 INFO  : Disconnected from the channel tcfchan#18.
+11:51:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:51:10 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+11:51:12 INFO  : 'jtag frequency' command is executed.
+11:51:12 INFO  : Context for 'APU' is selected.
+11:51:12 INFO  : System reset is completed.
+11:51:15 INFO  : 'after 3000' command is executed.
+11:51:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+11:51:16 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+11:51:16 INFO  : Context for 'APU' is selected.
+11:51:16 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+11:51:16 INFO  : 'configparams force-mem-access 1' command is executed.
+11:51:16 INFO  : Context for 'APU' is selected.
+11:51:16 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+11:51:24 INFO  : 'ps7_init' command is executed.
+11:51:25 INFO  : 'ps7_post_config' command is executed.
+11:51:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:51:27 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:51:29 INFO  : 'configparams force-mem-access 0' command is executed.
+11:51:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:51:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:51:33 INFO  : 'con' command is executed.
+11:51:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:51:33 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+11:58:45 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:59:05 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:59:09 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:59:16 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:59:20 INFO  : Disconnected from the channel tcfchan#19.
+11:59:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:59:22 INFO  : Jtag cable 'JTAG-ONB4 2516330075ADA' is selected.
+11:59:24 INFO  : 'jtag frequency' command is executed.
+11:59:24 INFO  : Context for 'APU' is selected.
+11:59:24 INFO  : System reset is completed.
+11:59:27 INFO  : 'after 3000' command is executed.
+11:59:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}' command is executed.
+11:59:29 INFO  : Device configured successfully with "C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit"
+11:59:29 INFO  : Context for 'APU' is selected.
+11:59:29 INFO  : Hardware design and registers information is loaded from 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa'.
+11:59:29 INFO  : 'configparams force-mem-access 1' command is executed.
+11:59:29 INFO  : Context for 'APU' is selected.
+11:59:29 INFO  : Sourcing of 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl' is done.
+11:59:47 INFO  : 'ps7_init' command is executed.
+11:59:47 INFO  : 'ps7_post_config' command is executed.
+11:59:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:59:47 INFO  : The application 'C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:59:49 INFO  : 'configparams force-mem-access 0' command is executed.
+11:59:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "JTAG-ONB4 2516330075ADA" && level==0 && jtag_device_ctx=="jsn-JTAG-ONB4-2516330075ADA-13722093-0"}
+fpga -file C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/bitstream/zsys_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/hw/zsys_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/School/Vivado/ZynqDemoRemake/workspace_csp_test/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:59:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:59:53 INFO  : 'con' command is executed.
+11:59:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:59:53 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test_system\_ide\scripts\jtag.tcl'
+15:12:26 INFO  : Disconnected from the channel tcfchan#20.

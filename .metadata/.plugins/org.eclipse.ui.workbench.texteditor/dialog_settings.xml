@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="via"/>
+		<item key="selection" value="RecvHandl"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="recvHandl"/>
+			<item value="csp_driver_can"/>
 			<item value="via"/>
 			<item value="examplePacket"/>
 			<item value="example"/>
@@ -21,8 +23,6 @@
 			<item value="recvHandler"/>
 			<item value="header_extension"/>
 			<item value="canHo¨"/>
-			<item value="canHo"/>
-			<item value="recv"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Packet"/>

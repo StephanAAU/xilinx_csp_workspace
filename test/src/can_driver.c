@@ -171,9 +171,9 @@ int CanPsIntrSetup(INTC *IntcInstPtr, XCanPs *CanInstPtr, u16 CanDeviceId, u16 C
 	XCanPs_SetHandler(CanInstPtr, XCANPS_HANDLER_EVENT,
 			(void *)EventHandler, (void *)CanInstPtr);
 
-
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Setup the Can filter in accordance with CSP.
-	XCanPs_AcceptFilterSet(CanInstPtr, 1, 0x3fe7c000, 0x1c26c000);
+	XCanPs_AcceptFilterSet(CanInstPtr, 1, 0x3fe7c000, 0x1c07c000);
 	XCanPs_AcceptFilterEnable(CanInstPtr, 1);
 
 
@@ -593,8 +593,8 @@ void csp_iface_can_init(int addr, int netmask, uint32_t bitrate) {
 	 * CFP_REMAIN gives possibility of 255 * 8 bytes = 2040
 	 * CSP_BEGIN frame, has two additional bytes, in total 2042 */
      xilCanInt.interface.mtu = CSP_BUFFER_SIZE; // Changed to 2042, instead of meson build from ubuntu 256.
-	if ( xilCanInt.interface.mtu > 2042) {
-		 xilCanInt.interface.mtu = 2042;
+	if ( xilCanInt.interface.mtu > 116) {
+		 xilCanInt.interface.mtu = 116;
 	}
 
 	 xilCanInt.ifdata.pbufs = NULL;

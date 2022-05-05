@@ -24,3 +24,8 @@ platform generate
 platform generate
 platform generate -domains freertos10_xilinx_domain 
 platform generate
+platform generate
+platform active {csptest}
+domain active {zynq_fsbl}
+domain active {freertos10_xilinx_domain}
+platform generate -domains 
