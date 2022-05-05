@@ -29,3 +29,7 @@ platform active {csptest}
 domain active {zynq_fsbl}
 domain active {freertos10_xilinx_domain}
 platform generate -domains 
+platform generate
+platform active {csptest}
+platform config -updatehw {C:/School/Vivado/ZynqDemoRemake/vivado/zsys_wrapper.xsa}
+platform generate -domains 

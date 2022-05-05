@@ -17,6 +17,18 @@
 #include "xparameters.h"
 #include "xstatus.h"
 
+// Camera includes
+#include "te_vdma.h"
+#include "xil_cache.h"
+#include "vdma.h"
+#include "te_fsbl_hooks.h"
+#include "gpio_ctrl.h"
+#include <sleep.h>
+
+// Camera defines
+extern unsigned char VideoBuffer[1080*1920*4];
+unsigned char CompressionBuffer[1080*1920*4];
+
 // Static memory allocation functions
 #include "staticrtos.h"
 
@@ -29,8 +41,10 @@
 /*-----------------------------------------------------------*/
 static void vIdleTask( void *pvParameters );
 static void vCameraTask( void *pvParameters );
+static void vCameraSetup( void *pvParameters );
 /*-----------------------------------------------------------*/
 SemaphoreHandle_t xCam_TakePicture;
+SemaphoreHandle_t xCam_Configured;
 
 /*-----------------------------------------------------------*/
 
@@ -39,13 +53,14 @@ SemaphoreHandle_t xCam_TakePicture;
 file. */
 static TaskHandle_t xIdleTask;
 static TaskHandle_t xCameraTask;
+static TaskHandle_t xCameraSetup;
 
 int main( void )
 {
-	int Status;
+
 	xil_printf( "Booting..\r\n" );
 
-	Status = xil_setup_can();
+	xil_setup_can();
 
 	csp_buffer_init();
 
@@ -71,6 +86,10 @@ int main( void )
 	/*
 	csp_driver_can_init(1, 5, 500000);
 	*/
+
+	// Create task to configure the camera
+	xTaskCreate(vCameraSetup, "Camera setup", 512, NULL, tskIDLE_PRIORITY+5, &xCameraSetup);
+
 	xTaskCreate(vIdleTask, "Idle task", 200, NULL, tskIDLE_PRIORITY, &xIdleTask);
 
 	// Create task for camera handling
@@ -78,6 +97,7 @@ int main( void )
 
 	// Create semaphore for taking an image.
 	xCam_TakePicture = xSemaphoreCreateBinary();
+	xCam_Configured = xSemaphoreCreateBinary();
 
 	//xSemaphoreGive( xCam_TakePicture );
 
@@ -105,11 +125,8 @@ static void vIdleTask( void *pvParameters )
 	{
 		/* Delay for 1 second. */
 		vTaskDelay( x1second );
-		xil_printf("%d..\r\n", cntr);
 		cntr++;
 		if (csp_qfifo_read(&inputQueue) == 0){
-			xil_printf("There was something to read\r\n");
-
 			if (inputQueue.packet->data[0] == 0x1) {
 				if (inputQueue.packet->data[1] == 0x1) {
 					xSemaphoreGive( xCam_TakePicture );
@@ -117,52 +134,100 @@ static void vIdleTask( void *pvParameters )
 			}
 
 		} else{
-			xil_printf("qfifo nothing to read\r\n");
+			xil_printf("%d..\r\n", cntr);
 		}
-/*// Take picture semaphore starts process.
-		if ((cntr % 5) == 0) {
-			xSemaphoreGive( xCam_TakePicture );
-		}
-*/
 	}
 }
 
+
+// Camera handler task
 static void vCameraTask ( void *pvParameters ) {
 
 	for (;;) {
 
-		// Take picture routine...
-	    if( xCam_TakePicture != NULL )
-	    {
-	        /* See if we can obtain the semaphore.  If the semaphore is not
-	        available wait 1 ticks to see if it becomes free. */
-	        if( xSemaphoreTake( xCam_TakePicture, ( TickType_t ) 1 ) == pdTRUE )
-	        {
-	            /* We were able to obtain the semaphore and can now access the
-	            shared resource. */
+		if ( xSemaphoreTake( xCam_Configured, ( TickType_t ) 1 ) == pdTRUE )
+		{
+			// Take picture routine...
+			if( xCam_TakePicture != NULL )
+			{
+				/* See if we can obtain the semaphore.  If the semaphore is not
+				available wait 1 ticks to see if it becomes free. */
+				if( xSemaphoreTake( xCam_TakePicture, ( TickType_t ) 1 ) == pdTRUE )
+				{
+					/* We were able to obtain the semaphore and can now access the
+					shared resource. */
 
-	            xil_printf("\r\n ..Starting image process.. \r\n");
+					xil_printf("\r\n ..Starting image process.. \r\n");
 
-	            vTaskDelay (pdMS_TO_TICKS(4*1000));
 
-	            uint8_t stuffToSend[2] = {0x1, 0xF};
+					gpio_toggle(71); 	// Status pin used to signal SW running state.
+					Xil_DCacheFlush();	// Flush cache to ensure cached is written to memory.
+					memcpy(&CompressionBuffer, VideoBuffer, 1920*1080*4); // Width * Height * (RGBA).
+					gpio_toggle(71); // Status pin used to signal SW running state.
+					xil_printf("Copied to compression buffer.. \r\n"); // Serial debug message.
 
-	            cspSender(stuffToSend, 2, 0x1C3F, 0xF, 0xF, 0x1D);
+					// Tell on CSP we are done.
+					uint8_t stuffToSend[2] = {0x1, 0xF};
+					cspSender(stuffToSend, 2, 0x1C3F, 0xF, 0xF, 0x1D);
 
-	            xil_printf("\r\n ..Image process done.. \r\n");
+					xil_printf("\r\n ..Image process done.. \r\n");
+				}
+				else
+				{
+					/* We could not obtain the semaphore and can therefore not access
+					the shared resource safely. */
+					xil_printf("\t\tCam idle... \r\n");
+				}
+			}
+			// It's still configured.
+			xSemaphoreGive( xCam_Configured );
+		} else {
+			xil_printf("\r\nCamera is not configured.. \r\n");
+		}
 
-	            /* We have finished accessing the shared resource.  Release the
-	            semaphore. */
-	            //xSemaphoreGive( xCam_TakePicture );
-	        }
-	        else
-	        {
-	            /* We could not obtain the semaphore and can therefore not access
-	            the shared resource safely. */
-	        	xil_printf("\r\n ..Camera task idle... \r\n");
-	        }
-	    }
 		vTaskDelay( pdMS_TO_TICKS(1000) );
 	}
 
+}
+
+static void vCameraSetup( void *pvParameters )
+{
+	u32 vdmaRdy = 1;
+	vTaskDelay(pdMS_TO_TICKS(10));
+	gpio_init();
+
+	usleep(100 *1000);
+	te_read_IDCODE();
+
+	xil_printf( "\r\n--------------------------------------------------------------------------------\r\n" );
+	xil_printf( "FreeRTOS starting...\r\n" );
+
+	xil_printf( "Initializing VDMA...\r\n" );
+
+	vTaskDelay(pdMS_TO_TICKS(500));
+	vdmaRdy = EnableVideoTimingController();
+	xil_printf( "VTC init: %i \r\n", vdmaRdy);
+
+	initIIC();
+	vTaskDelay(pdMS_TO_TICKS(500));
+
+	configRPI();
+	vTaskDelay(pdMS_TO_TICKS(500));
+
+	if (vdmaRdy == 0) {
+		xil_printf("VDMA initialized.... \r\n");
+	}
+
+	vTaskDelay(pdMS_TO_TICKS(2000));
+
+	Xil_Out32(0x43c10040, 0x1);
+	xil_printf("Enabled CSI.. \r\n");
+
+	// Give semaphore...
+	xSemaphoreGive( xCam_Configured );
+
+	while (1) {
+		// Go to sleep...
+		vTaskDelay(pdMS_TO_TICKS(10000));
+	}
 }

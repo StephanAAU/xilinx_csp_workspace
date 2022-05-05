@@ -15,6 +15,8 @@
 		<item key="caseSensitive" value="false"/>
 		<item key="searchFlags" value="227191"/>
 		<list key="previousPatterns">
+			<item value="csp_can2_tx"/>
+			<item value="csp_can_tx"/>
 			<item value="CFPID"/>
 			<item value="packet"/>
 			<item value="CFP2_SENDER_MASK"/>
