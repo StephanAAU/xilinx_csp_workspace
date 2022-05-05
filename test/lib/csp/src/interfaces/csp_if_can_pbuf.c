@@ -46,6 +46,7 @@ csp_packet_t * csp_can_pbuf_new(csp_can_interface_data_t * ifdata, uint32_t id, 
 
 	csp_can_pbuf_cleanup(ifdata);
 
+
 	uint32_t now = (task_woken) ? csp_get_ms_isr() : csp_get_ms();
 
 	csp_packet_t * packet = (task_woken) ? csp_buffer_get_isr(0) : csp_buffer_get(0);

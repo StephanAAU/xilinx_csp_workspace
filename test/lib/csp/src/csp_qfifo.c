@@ -14,7 +14,7 @@ void csp_qfifo_init(void) {
 	qfifo_queue_handle = csp_queue_create_static(CSP_QFIFO_LEN, sizeof(csp_qfifo_t), qfifo_queue_buffer, &qfifo_queue);
 }
 
-int csp_qfifo_read(csp_qfifo_t * input) {
+int csp_qfifo_read(csp_qfifo_t * input) { // Input is the buffer in which the packet is stored.
 
 	if (csp_queue_dequeue(qfifo_queue_handle, input, FIFO_TIMEOUT) != CSP_QUEUE_OK)
 		return CSP_ERR_TIMEDOUT;

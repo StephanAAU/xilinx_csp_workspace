@@ -260,13 +260,16 @@ int csp_can1_tx(csp_iface_t * iface, uint16_t via, csp_packet_t * packet) {
 
 int csp_can2_rx(csp_iface_t * iface, uint32_t id, const uint8_t * data, uint8_t dlc, int * task_woken) {
 
-	csp_can_interface_data_t * ifdata = iface->interface_data;
+	csp_can_interface_data_t * ifdata = iface->interface_data;  // Interface data
 
 	/* Bind incoming frame to a packet buffer */
-	csp_packet_t * packet = csp_can_pbuf_find(ifdata, id, CFP2_ID_CONN_MASK, task_woken);
+	csp_packet_t * packet = csp_can_pbuf_find(ifdata, id, CFP2_ID_CONN_MASK, task_woken); // Find the pbuf (packet buffer). This sets the packet beginning.
+	// Check what is in the packet is it equal to zero. This is if now new packet is found.
 	if (packet == NULL) {
+		// Something about a wrong id check
 		if (id & (CFP2_BEGIN_MASK << CFP2_BEGIN_OFFSET)) {
-			packet = csp_can_pbuf_new(ifdata, id, task_woken);
+			// Make a new empty buffer.
+			packet = csp_can_pbuf_new(ifdata, id, task_woken); // added address variable thing
 			if (packet == NULL) {
 				iface->rx_error++;
 				return CSP_ERR_NOMEM;
@@ -278,10 +281,11 @@ int csp_can2_rx(csp_iface_t * iface, uint32_t id, const uint8_t * data, uint8_t 
 	}
 
 
-	/* BEGIN */
+	/* BEGIN  Acutally parsing the CAN frame*/
+	// Checks if this is the first frame as it can be seen from the begin byte.
 	if (id & (CFP2_BEGIN_MASK << CFP2_BEGIN_OFFSET)) {
 
-		/* Discard packet if DLC is less than CSP id + CSP length fields */
+		/* Discard packet if DLC is less than CSP id + CSP length fields */ // If you did not send in the correct format throw away and do error.
 		if (dlc < 4) {
 			csp_dbg_can_errno = CSP_DBG_CAN_ERR_SHORT_BEGIN;
 			iface->frame++;
@@ -289,6 +293,7 @@ int csp_can2_rx(csp_iface_t * iface, uint32_t id, const uint8_t * data, uint8_t 
 			return CSP_ERR_INVAL;
 		}
 
+		// Count up the frame
 		iface->frame++;
 		csp_id2_setup_rx(packet);
 
@@ -311,7 +316,7 @@ int csp_can2_rx(csp_iface_t * iface, uint32_t id, const uint8_t * data, uint8_t 
 		dlc -= 4;
 
 		/* Set next expected fragment counter to be 1 */
-		packet->rx_count = 1;
+		packet->rx_count = 1; // It is what it is supposed to test for.
 
 		/* FRAGMENT */
 	} else {
@@ -333,7 +338,7 @@ int csp_can2_rx(csp_iface_t * iface, uint32_t id, const uint8_t * data, uint8_t 
 		packet->rx_count = (packet->rx_count + 1) & CFP2_FC_MASK;
 	}
 
-	/* Check for overflow */
+	/* Check for overflow */ // By checking if the packet recieved will stretch it above the maximum transfer unit of that interface. Which makes sense.
 	if (packet->frame_length + dlc > iface->mtu) {
 		csp_dbg_can_errno = CSP_DBG_CAN_ERR_RX_OVF;
 		iface->frame++;
@@ -345,7 +350,7 @@ int csp_can2_rx(csp_iface_t * iface, uint32_t id, const uint8_t * data, uint8_t 
 	memcpy(&packet->frame_begin[packet->frame_length], data, dlc);
 	packet->frame_length += dlc;
 
-	/* END */
+	/* END */ // End because the end frame bit has been set.
 	if (id & (CFP2_END_MASK << CFP2_END_OFFSET)) {
 
 		/* Parse CSP header into csp_id type */
@@ -360,7 +365,7 @@ int csp_can2_rx(csp_iface_t * iface, uint32_t id, const uint8_t * data, uint8_t 
 		csp_can_pbuf_free(ifdata, packet, 0, task_woken);
 
 		/* Data is available */
-		csp_qfifo_write(packet, iface, task_woken);
+		csp_qfifo_write(packet, iface, task_woken); //Not that usefull as we don't implement the whole csp package.
 
 	}
 
@@ -370,7 +375,7 @@ int csp_can2_rx(csp_iface_t * iface, uint32_t id, const uint8_t * data, uint8_t 
 int csp_can2_tx(csp_iface_t * iface, uint16_t via, csp_packet_t * packet) {
 
 	/* Loopback */
-	if (packet->id.dst == iface->addr) {
+	if (packet->id.dst == iface->addr) { // Does it send to the same address as it self.
 		csp_qfifo_write(packet, iface, NULL);
 		return CSP_ERR_NONE;
 	}
@@ -381,11 +386,13 @@ int csp_can2_tx(csp_iface_t * iface, uint16_t via, csp_packet_t * packet) {
 	int sender_count = ifdata->cfp_packet_counter++;
 	int tx_count = 0;
 
+	// define the CAN id and the frameBUF
 	uint32_t can_id = 0;
 	uint8_t frame_buf_inp = 0;
 	uint8_t frame_buf_avail = CAN_FRAME_SIZE;
 
-	/* Pack mandatory fields of header */
+	/* Pack mandatory fields of CAN identifier */
+
 	can_id = (((packet->id.pri & CFP2_PRIO_MASK) << CFP2_PRIO_OFFSET) |
 			  ((packet->id.dst & CFP2_DST_MASK) << CFP2_DST_OFFSET) |
 			  ((iface->addr & CFP2_SENDER_MASK) << CFP2_SENDER_OFFSET) |

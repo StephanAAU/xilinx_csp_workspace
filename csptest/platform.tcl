@@ -17,3 +17,10 @@ platform generate -domains
 platform active {csptest}
 platform generate
 platform generate -domains freertos10_xilinx_domain 
+platform generate
+platform generate
+platform clean
+platform generate
+platform generate
+platform generate -domains freertos10_xilinx_domain 
+platform generate

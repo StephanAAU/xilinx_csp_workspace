@@ -51,7 +51,7 @@
                                 								
                                 <option id="xilinx.gnu.compiler.option.debugging.level.1400733425" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
                                 								
-                                <option id="xilinx.gnu.compiler.inferred.swplatform.includes.819187476" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath"/>
+                                <option id="xilinx.gnu.compiler.inferred.swplatform.includes.819187476" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes"/>
                                 								
                                 <option id="xilinx.gnu.compiler.misc.other.1976466285" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard" valueType="string"/>
                                 								
@@ -87,7 +87,7 @@
                             							
                             <tool id="xilinx.gnu.armv7.c.toolchain.linker.debug.1860666448" name="ARM v7 gcc linker" superClass="xilinx.gnu.armv7.c.toolchain.linker.debug">
                                 								
-                                <option id="xilinx.gnu.linker.inferred.swplatform.lpath.36441669" name="Software Platform Library Path" superClass="xilinx.gnu.linker.inferred.swplatform.lpath" valueType="libPaths"/>
+                                <option id="xilinx.gnu.linker.inferred.swplatform.lpath.36441669" name="Software Platform Library Path" superClass="xilinx.gnu.linker.inferred.swplatform.lpath"/>
                                 								
                                 <option id="xilinx.gnu.linker.inferred.swplatform.flags.1498784141" name="Software Platform Inferred Flags" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
                                     									
@@ -165,7 +165,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding="lib/csp/src/interfaces/csp_if_kiss.c|lib/csp/utils|lib/csp/AUTHORS|lib/csp/CHANGELOG|lib/csp/CMakeLists.txt|lib/csp/csp_autoconfig.h.in|lib/csp/LICENSE|lib/csp/meson_options.txt|lib/csp/meson.build|lib/csp/README.md|lib/csp/waf|lib/csp/wscript|lib/csp/zephyr|lib/csp/examples|lib/csp/contrib|_ide" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="src/csp_driver_can.c|lib/csp/src/interfaces/csp_if_kiss.c|lib/csp/utils|lib/csp/AUTHORS|lib/csp/CHANGELOG|lib/csp/CMakeLists.txt|lib/csp/csp_autoconfig.h.in|lib/csp/LICENSE|lib/csp/meson_options.txt|lib/csp/meson.build|lib/csp/README.md|lib/csp/waf|lib/csp/wscript|lib/csp/zephyr|lib/csp/examples|lib/csp/contrib|_ide" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				

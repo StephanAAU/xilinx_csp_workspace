@@ -2330,6 +2330,7 @@ TickType_t xTaskGetTickCount( void )
     portTICK_TYPE_EXIT_CRITICAL();
 
     return xTicks;
+
 }
 /*-----------------------------------------------------------*/
 

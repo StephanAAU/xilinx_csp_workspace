@@ -11,7 +11,7 @@
 
 csp_conf_t csp_conf = {
 	.version = 2,
-	.address = 0,
+	.address = 3000,
 	.hostname = "",
 	.model = "",
 	.revision = "",

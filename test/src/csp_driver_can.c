@@ -31,7 +31,7 @@
 #include <semphr.h>
 #include <task.h>
 
-#ifdef REFERENCE_DESIGN
+
 #ifndef CAN_DEFER_TASK
 #define CAN_DEFER_TASK 0
 #endif
@@ -269,4 +269,4 @@ csp_iface_t * csp_driver_can_init(int addr, int netmask, int id, can_mode_e mode
 	return &mcan[id].interface;
 
 }
-#endif
+

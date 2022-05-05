@@ -1,37 +1,55 @@
+/* Xil libraries*/
 #include "xparameters.h"
 #include "xcanps.h"
 #include "xil_exception.h"
 #include "xil_printf.h"
 
+/* xilCanDriverInclude*/
 #include "xscugic.h"
 
+/* FreeRTOS includes*/
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
 #include "timers.h"
 #include "semphr.h"
 
-#define TEST_MESSAGE_ID		2000
+/* CSP includes*/
+#include <csp/csp.h>
+#include <csp/include/csp/csp_debug.h>
+#include <csp/include/csp/interfaces/csp_if_can.h>
 
+#include <machine/endian.h>
+
+/* Message ID*/
+// #define TEST_MESSAGE_ID		2000 Deprecated
+
+/* Can instance ID*/
 #define INTC				XScuGic
 #define CAN_DEVICE_ID		XPAR_XCANPS_0_DEVICE_ID
 #define INTC_DEVICE_ID		XPAR_SCUGIC_SINGLE_DEVICE_ID
 #define CAN_INTR_VEC_ID		XPAR_XCANPS_0_INTR
 
+/* Length of the frame and data*/
 #define XCANPS_MAX_FRAME_SIZE_IN_WORDS (XCANPS_MAX_FRAME_SIZE / sizeof(u32))
 #define FRAME_DATA_LENGTH	8 /* Frame Data field length */
 
 XCanPs_Config *ConfigPtr;
 
+/* Bit timing register*/
 #define TEST_BTR_SYNCJUMPWIDTH		0
 #define TEST_BTR_FIRST_TIMESEGMENT	7
 #define TEST_BTR_SECOND_TIMESEGMENT	2
 #define TEST_BRPR_BAUD_PRESCALAR	3
 
+/* Instances of CAN*/
 static XCanPs CanInstance;    			/* Instance of the Can driver */
 static INTC IntcInstance; 				/* Instance of the Interrupt Controller driver */
 extern XScuGic xInterruptController;
 
+// Defines for err
+#define CSP_DBG_CAN_ERR_TX_OVF 7
+#define CSP_DBG_CAN_PBUF_NO_FIND 8
 
 /************************** Function Prototypes ******************************/
 
@@ -67,6 +85,22 @@ static u32 RxFrame[XCANPS_MAX_FRAME_SIZE_IN_WORDS];
 volatile static int LoopbackError;	/* Asynchronous error occurred */
 volatile static int RecvDone;		/* Received a frame */
 volatile static int SendDone;		/* Frame was sent successfully */
+
+
+/* Interface definition and addresses*/
+struct xilCan_d{
+	uint32_t id;
+	csp_can_interface_data_t ifdata;
+	SemaphoreHandle_t lock;
+	StaticSemaphore_t lock_buf;
+	csp_iface_t interface;
+};
+
+typedef struct xilCan_d xilCan_d;
+
+xilCan_d xilCanInt;
+
+
 
 /*****************************************************************************/
 /**
@@ -123,6 +157,8 @@ int CanPsIntrSetup(INTC *IntcInstPtr, XCanPs *CanInstPtr, u16 CanDeviceId, u16 C
 	 */
 	Config(CanInstPtr);
 
+
+
 	/*
 	 * Set interrupt handlers.
 	 */
@@ -134,6 +170,12 @@ int CanPsIntrSetup(INTC *IntcInstPtr, XCanPs *CanInstPtr, u16 CanDeviceId, u16 C
 			(void *)ErrorHandler, (void *)CanInstPtr);
 	XCanPs_SetHandler(CanInstPtr, XCANPS_HANDLER_EVENT,
 			(void *)EventHandler, (void *)CanInstPtr);
+
+
+	// Setup the Can filter in accordance with CSP.
+	XCanPs_AcceptFilterSet(CanInstPtr, 1, 0x3fe7c000, 0x1c26c000);
+	XCanPs_AcceptFilterEnable(CanInstPtr, 1);
+
 
 
 	/*
@@ -192,60 +234,6 @@ static void Config(XCanPs *InstancePtr)
 
 }
 
-/*****************************************************************************/
-/**
-*
-* Send a CAN frame.
-*
-* @param	InstancePtr is a pointer to the driver instance.
-*
-* @return	None.
-*
-* @note		None.
-*
-******************************************************************************/
-static void SendFrame(XCanPs *InstancePtr)
-{
-	u8 *FramePtr;
-	int Index;
-	int Status;
-
-	/*
-	 * Create correct values for Identifier and Data Length Code Register.
-	 */
-	if (LoopbackError == TRUE) {
-			return XST_LOOPBACK_ERROR;
-		}
-
-	TxFrame[0] = (u32)XCanPs_CreateIdValue((u32)TEST_MESSAGE_ID, 0, 0, 0, 0);
-	TxFrame[1] = (u32)XCanPs_CreateDlcValue((u32)FRAME_DATA_LENGTH);
-
-	/*
-	 * Now fill in the data field with known values so we can verify them
-	 * on receive.
-	 */
-	FramePtr = (u8 *)(&TxFrame[2]);
-	for (Index = 0; Index < FRAME_DATA_LENGTH; Index++) {
-		*FramePtr++ = (u8)Index;
-	}
-
-	/*
-	 * Now wait until the TX FIFO is not full and send the frame.
-	 */
-	while (XCanPs_IsTxFifoFull(InstancePtr) == TRUE);
-
-	Status = XCanPs_Send(InstancePtr, TxFrame);
-
-	if (Status != XST_SUCCESS) {
-		/*
-		 * The frame could not be sent successfully.
-		 */
-		LoopbackError = TRUE;
-		RecvDone = TRUE;
-	}
-	SendDone = TRUE;
-}
-
 
 /*****************************************************************************/
 /**
@@ -266,6 +254,7 @@ static void SendHandler(void *CallBackRef)
 	/*
 	 * The frame was sent successfully. Notify the task context.
 	 */
+	xilCanInt.interface.tx++;
 	SendDone = TRUE;
 }
 
@@ -287,28 +276,36 @@ static void SendHandler(void *CallBackRef)
 ******************************************************************************/
 static void RecvHandler(void *CallBackRef)
 {
-	BaseType_t xHigherPriorityTaskWoken;
-	//xHigherPriorityTaskWoken = pdFALSE;
-	//xSemaphoreGiveFromISR(Receieved_Sem, &xHigherPriorityTaskWoken);
 	XCanPs_Recv(&CanInstance, RxFrame);
-	RxFrame[0] = __builtin_bswap32 (RxFrame[0]);
 
+	xil_printf("%x %x %x %x \n \r", RxFrame[0], RxFrame[1], RxFrame[2], RxFrame[3]);
+
+	// The RxFrame needs to have the RTR and ID ext removed.
+
+	RxFrame[0] = ((RxFrame[0] & 0xffe00000)>>3)|((RxFrame[0] &0xffffe)>>1);
+
+	xil_printf("%x \n \r", RxFrame[0]);
+
+	u8 (*messageData)[8] = (void*) &RxFrame[2];
+
+	//messageData[0] =(RxFrame[2]&0xFF000000)>>24;
+
+	//messageData[1] = (u8) *(RxFrame+sizeof(u32)*2);
+
+
+	xil_printf("%x %x %x %x \n \r",(*messageData)[4], (*messageData)[5], (*messageData)[6], (*messageData)[7]);
+
+
+	xil_printf("%x %x %x %x \n \r",RxFrame[1] >> XCANPS_DLCR_DLC_SHIFT);
+
+
+	int TaskWokenFromISR = 1;
+
+	csp_can_rx(&xilCanInt.interface, RxFrame[0], *messageData, RxFrame[1] >> XCANPS_DLCR_DLC_SHIFT, &TaskWokenFromISR); //
+
+	xilCanInt.interface.rx++;
 }
 
-/*
-void Print_Recieved_Data (){
-	while(1){
-		if (xSemaphoreTake(Receieved_Sem, portMAX_DELAY )){
-
-		int ID;
-
-		ID = XCanPs_CreateIdValue((u32)2000, 0, 0, 0, 0);
-		xil_printf("ID: heyo %x , I don't know what this is : %x, Message : %x %x \r \n + RXframe nul %x \r\n", ID, RxFrame[1], RxFrame[2], RxFrame[3], (RxFrame[0]>>21)&0x7ff);
-
-		}
-	}
-}
-*/
 
 /*****************************************************************************/
 /**
@@ -470,6 +467,29 @@ static void EventHandler(void *CallBackRef, u32 IntrMask)
 	}
 }
 
+void canHopper(csp_iface_t *iface, uint32_t CFPID, uint8_t* frameBuf, uint8_t frameBufInp){
+
+	// The CFP ID has to be changed so that it fits with the registers, therefor shifts are done.
+	TxFrame[0] = ((CFPID & 0x1FFC0000)<<3)|(0x1<<19)|((CFPID & 0x3FFFF)<<1);
+
+	// The data length has to be so that it fits the registers.
+	TxFrame[1] = XCanPs_CreateDlcValue(frameBufInp);
+
+	// Put the first four bytes of the frameBuf into the Dataword 1 register frame
+	TxFrame[2] = (frameBuf[3]<<24)|(frameBuf[2]<<16)|(frameBuf[1]<<8)|(frameBuf[0]);
+
+
+	// Put the last four bytes of the frameBuf into the Dataword 2 register frame
+	int i = 0;
+	for (i = 0; i  < frameBufInp-4; i++ ){
+		TxFrame[3] |= frameBuf[i + 4]<<(i*8);
+	}
+
+	TxFrame[3] = (frameBuf[7]<<24)|(frameBuf[6]<<16)|(frameBuf[5]<<8)|(frameBuf[4]);
+
+	XCanPs_Send(&CanInstance, TxFrame);
+}
+
 
 /*****************************************************************************/
 /**
@@ -553,3 +573,87 @@ static int SetupInterruptSystem(INTC *IntcInstancePtr,
 int xil_setup_can(void) {
 	return ( CanPsIntrSetup(&xInterruptController, &CanInstance, CAN_DEVICE_ID, CAN_INTR_VEC_ID) );
 }
+
+void csp_iface_can_init(int addr, int netmask, uint32_t bitrate) {
+
+
+	xilCanInt.interface.name = "CAN0";
+
+
+	/* Create a mutex type semaphore. */
+	 xilCanInt.lock = xSemaphoreCreateBinary();
+
+	const csp_conf_t *csp_conf = csp_get_conf();
+
+	xilCanInt.ifdata.tx_func = canHopper;
+
+
+	/* The MTU is configured run-time, since the buffer size can be configured externally
+	 * however, it must not exceed 2042 due to the CFP_REMAIN field limitation
+	 * CFP_REMAIN gives possibility of 255 * 8 bytes = 2040
+	 * CSP_BEGIN frame, has two additional bytes, in total 2042 */
+     xilCanInt.interface.mtu = CSP_BUFFER_SIZE; // Changed to 2042, instead of meson build from ubuntu 256.
+	if ( xilCanInt.interface.mtu > 2042) {
+		 xilCanInt.interface.mtu = 2042;
+	}
+
+	 xilCanInt.ifdata.pbufs = NULL;
+	 xilCanInt.interface.interface_data = & xilCanInt.ifdata;
+
+	 xilCanInt.interface.addr = addr;
+	 xilCanInt.interface.netmask = netmask;
+
+	/* Regsiter interface */
+	csp_can_add_interface(&xilCanInt.interface);
+}
+
+
+
+
+int cspSender(uint8_t* dataToSend, uint8_t dataLength, uint16_t destination, uint8_t sourceP, uint8_t destP,
+		uint8_t cspFlag){
+
+	// Initiate packet
+	csp_packet_t * Packet;
+
+	// Create it in pbuf
+	Packet = csp_can_pbuf_new(&xilCanInt.ifdata, 5, 0);
+
+	// If it did not create a pbuf return with error.
+	if (Packet == NULL){
+		return CSP_DBG_CAN_PBUF_NO_FIND;
+	}
+
+
+
+	// Check for overflow and return error should it happen
+	if (dataLength > xilCanInt.interface.mtu){
+		return CSP_DBG_CAN_ERR_TX_OVF;
+	}
+
+	// Packet data length.
+	Packet->length = dataLength;
+
+
+	// Append the data to the packet.
+	int i;
+
+	for (i = 0 ; i < dataLength ; i++){
+		Packet->data[i] = dataToSend[i];
+	}
+
+	// ID and neccesary headers.
+	Packet->id.dport = destP;
+	Packet->id.sport = sourceP;
+	Packet->id.dst = destination;
+	Packet->id.src = xilCanInt.interface.addr;
+	Packet->id.flags = cspFlag;
+	Packet->id.pri = 0x0;
+
+	// Call the csp tx function through return.
+	return csp_can2_tx(&xilCanInt.interface, 1, Packet);
+
+}
+
+
+

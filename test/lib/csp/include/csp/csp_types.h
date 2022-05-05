@@ -155,12 +155,9 @@ typedef struct csp_packet_s {
 	 * csp_buffer_init(), and can later be accessed by csp_buffer_data_size()
 	 */
 	union {
-		/** Access data as uint8_t. */
-		uint8_t data[0];
-		/** Access data as uint16_t */
-		uint16_t data16[0];
-		/** Access data as uint32_t */
-		uint32_t data32[0];
+		uint8_t data[CSP_BUFFER_SIZE];
+		uint16_t data16[CSP_BUFFER_SIZE / 2];
+		uint32_t data32[CSP_BUFFER_SIZE / 4];
 	};
 
 } csp_packet_t;
