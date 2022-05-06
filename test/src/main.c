@@ -127,7 +127,7 @@ static void vIdleTask( void *pvParameters )
 		vTaskDelay( x1second );
 		cntr++;
 		if (csp_qfifo_read(&inputQueue) == 0){
-			if (inputQueue.packet->id.sport <= 0 && inputQueue.packet->id.sport >= 6){
+			if (inputQueue.packet->id.dport >= 0 && inputQueue.packet->id.dport <= 6){
 				serviceToDo(inputQueue.packet);
 			} else {
 			if (inputQueue.packet->data[0] == 0x1) {

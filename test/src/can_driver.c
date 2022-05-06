@@ -611,7 +611,9 @@ void serviceToDo (csp_packet_t *receivedPacket){
 
 	if (receivedPacket->id.dport == 0){
 		if (receivedPacket->data[1] == 2 || receivedPacket->data[1] == 7){
-			// do squat, maybe reply not avaiable.
+					// do squat, maybe reply not avaiable.
+		} else {
+			csp_service_handler(receivedPacket);
 		}
 	} else {
 		csp_service_handler(receivedPacket);
