@@ -49,7 +49,7 @@
 */
 #define CSP_CMP_PEEK 4
 /**
-   Poke/write data from memory.
+   Poke/write data to memory.
 */
 #define CSP_CMP_POKE 5
 /**

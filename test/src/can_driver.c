@@ -607,7 +607,17 @@ void csp_iface_can_init(int addr, int netmask, uint32_t bitrate) {
 	csp_can_add_interface(&xilCanInt.interface);
 }
 
+void serviceToDo (csp_packet_t *receivedPacket){
 
+	if (receivedPacket->id.dport == 0){
+		if (receivedPacket->data[1] == 2 || receivedPacket->data[1] == 7){
+			// do squat, maybe reply not avaiable.
+		}
+	} else {
+		csp_service_handler(receivedPacket);
+	}
+
+}
 
 
 int cspSender(uint8_t* dataToSend, uint8_t dataLength, uint16_t destination, uint8_t sourceP, uint8_t destP,

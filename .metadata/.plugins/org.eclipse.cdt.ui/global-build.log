@@ -1,27 +1,1417 @@
-Nothing to build in platform 'csptest'
+10:36:14 **** Incremental Build of project csptest ****
+buildplatform.bat 59592 csptest freertos10_xilinx_domain,zynq_fsbl 
+XSDB Server Channel: tcfchan#1
+Reading the platform  : "csptest"
+Building the zynq_fsbl application.
+make: Entering directory 'C:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/zynq_fsbl/zynq_fsbl_bsp'
 
-16:06:22 **** Incremental Build of configuration Debug for project test ****
+make --no-print-directory seq_libs
+
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_10/src"
+
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_0/src"
+
+make -C ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eab
+i-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard 
+-nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/axi_reg32_v1_0/src"
+
+make -C ps7_cortexa9_0/libsrc/axi_reg32_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+ostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/canps_v3_6/src"
+
+make -C ps7_cortexa9_0/libsrc/canps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/clk_wiz_v1_4/src"
+
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src"
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+ard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src"
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-e
+abi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=har
+d -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_7/src"
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_8/src"
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_9/src"
+
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_14/src"
+
+make -C ps7_cortexa9_0/libsrc/iicps_v3_14/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_9/src"
+
+make -C ps7_cortexa9_0/libsrc/qspips_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_6/src"
+
+make -C ps7_cortexa9_0/libsrc/scugic_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_3/src"
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_4/src"
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_13/src"
+
+make -C ps7_cortexa9_0/libsrc/sdps_v3_13/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_6/src"
+
+make -C ps7_cortexa9_0/libsrc/standalone_v7_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_14/src"
+
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_14/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_11/src"
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_7/src"
+
+make -C ps7_cortexa9_0/libsrc/usbps_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v8_4/src"
+
+make -C ps7_cortexa9_0/libsrc/vtc_v8_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/wdtps_v3_5/src"
+
+make -C ps7_cortexa9_0/libsrc/wdtps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_6/src"
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v4_6/src"
+
+make -C ps7_cortexa9_0/libsrc/xilffs_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_6/src"
+
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_0/src"
+
+make -C ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Compiling axi_i2s_adi..."
+
+axi_i2s_adi_selftest.c: In function 'AXI_I2S_ADI_Reg_SelfTest':
+axi_i2s_adi_selftest.c:52:60: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+   52 |    if ( AXI_I2S_ADI_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+      |                                                            ^~
+axi_i2s_adi_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+   36 |  int Index;
+      |      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/axi_reg32_v1_0/src"
+
+make -C ps7_cortexa9_0/libsrc/axi_reg32_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Compiling axi_reg32..."
+
+axi_reg32_selftest.c: In function 'AXI_REG32_Reg_SelfTest':
+axi_reg32_selftest.c:52:58: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+   52 |    if ( AXI_REG32_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+      |                                                          ^~
+axi_reg32_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+   36 |  int Index;
+      |      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_6/src"
+
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+'Finished building libraries sequentially.'
+
+make -j 6 --no-print-directory par_libs
+
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_10/src"
+
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_0/src"
+
+make -C ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eab
+i-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard 
+-nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/axi_reg32_v1_0/src"
+
+make -C ps7_cortexa9_0/libsrc/axi_reg32_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+ostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/canps_v3_6/src"
+
+make -C ps7_cortexa9_0/libsrc/canps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/clk_wiz_v1_4/src"
+
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src"
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+ard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src"
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-e
+abi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=har
+d -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_7/src"
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_8/src"
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_9/src"
+
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_14/src"
+
+make -C ps7_cortexa9_0/libsrc/iicps_v3_14/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_9/src"
+
+make -C ps7_cortexa9_0/libsrc/qspips_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_6/src"
+
+make -C ps7_cortexa9_0/libsrc/scugic_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_3/src"
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_4/src"
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_13/src"
+
+make -C ps7_cortexa9_0/libsrc/sdps_v3_13/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_6/src"
+
+make -C ps7_cortexa9_0/libsrc/standalone_v7_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_14/src"
+
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_14/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_11/src"
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_7/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v8_4/src"
+
+make -C ps7_cortexa9_0/libsrc/usbps_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+make -C ps7_cortexa9_0/libsrc/vtc_v8_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/wdtps_v3_5/src"
+
+make -C ps7_cortexa9_0/libsrc/wdtps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_6/src"
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v4_6/src"
+
+make -C ps7_cortexa9_0/libsrc/xilffs_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_6/src"
+
+make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v6_10/src"
+
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/canps_v3_6/src"
+
+make -C ps7_cortexa9_0/libsrc/canps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/clk_wiz_v1_4/src"
+
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src"
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+ -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src"
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_7/src"
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+In file included from ../../../include/xstatus.h:33,
+                 from xclk_wiz.c:35:
+xclk_wiz.c: In function 'XClk_Wiz_SetMinErr':
+../../../include/xil_assert.h:118:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  118 |         return 0;                                  \
+      |                ^
+xclk_wiz.c:299:2: note: in expansion of macro 'Xil_AssertNonvoid'
+  299 |  Xil_AssertNonvoid(InstancePtr != NULL);
+      |  ^~~~~~~~~~~~~~~~~
+xclk_wiz.c:297:6: note: declared here
+  297 | void XClk_Wiz_SetMinErr(XClk_Wiz  *InstancePtr, u64 Minerr)
+      |      ^~~~~~~~~~~~~~~~~~
+In file included from ../../../include/xstatus.h:33,
+                 from xclk_wiz.c:35:
+../../../include/xil_assert.h:118:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  118 |         return 0;                                  \
+      |                ^
+xclk_wiz.c:300:2: note: in expansion of macro 'Xil_AssertNonvoid'
+  300 |  Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+      |  ^~~~~~~~~~~~~~~~~
+xclk_wiz.c:297:6: note: declared here
+  297 | void XClk_Wiz_SetMinErr(XClk_Wiz  *InstancePtr, u64 Minerr)
+      |      ^~~~~~~~~~~~~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_8/src"
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_9/src"
+
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_14/src"
+
+make -C ps7_cortexa9_0/libsrc/iicps_v3_14/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_9/src"
+
+make -C ps7_cortexa9_0/libsrc/qspips_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_6/src"
+
+make -C ps7_cortexa9_0/libsrc/scugic_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_3/src"
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_4/src"
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_13/src"
+
+make -C ps7_cortexa9_0/libsrc/sdps_v3_13/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_6/src"
+
+make -C ps7_cortexa9_0/libsrc/standalone_v7_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_14/src"
+
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_14/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_11/src"
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_7/src"
+
+make -C ps7_cortexa9_0/libsrc/usbps_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v8_4/src"
+
+make -C ps7_cortexa9_0/libsrc/vtc_v8_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCH
+IVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfil
+es -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/wdtps_v3_5/src"
+
+make -C ps7_cortexa9_0/libsrc/wdtps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_6/src"
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v4_6/src"
+
+make -C ps7_cortexa9_0/libsrc/xilffs_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+xtime_l.c:45:9: note: '#pragma message: For the sleep routines, Global timer is being used'
+   45 | #pragma message ("For the sleep routines, Global timer is being used")
+      |         ^~~~~~~
+'Finished building libraries parallelly.'
+
+make --no-print-directory archive
+
+arm-none-eabi-ar -r  ps7_cortexa9_0/lib/libxil.a ps7_cortexa9_0/lib/xadcps_selftest.o ps7_cortexa9_0/lib/xplatform_info.o ps7_c
+ortexa9_0/lib/xil_mem.o ps7_cortexa9_0/lib/xwdtps.o ps7_cortexa9_0/lib/_exit.o ps7_cortexa9_0/lib/xil_testio.o ps7_cortexa9_0/l
+ib/xusbps_sinit.o ps7_cortexa9_0/lib/xiicps_selftest.o ps7_cortexa9_0/lib/xdevcfg_hw.o ps7_cortexa9_0/lib/xil_sleeptimer.o ps7_
+cortexa9_0/lib/xqspips_options.o ps7_cortexa9_0/lib/xdmaps_g.o ps7_cortexa9_0/lib/xscutimer_g.o ps7_cortexa9_0/lib/xsdps_option
+s.o ps7_cortexa9_0/lib/xil_misc_psreset_api.o ps7_cortexa9_0/lib/xdmaps_sinit.o ps7_cortexa9_0/lib/xscutimer_sinit.o ps7_cortex
+a9_0/lib/inbyte.o ps7_cortexa9_0/lib/xdmaps_selftest.o ps7_cortexa9_0/lib/xscutimer_selftest.o ps7_cortexa9_0/lib/xvtc_intr.o p
+s7_cortexa9_0/lib/putnum.o ps7_cortexa9_0/lib/xttcps_selftest.o ps7_cortexa9_0/lib/xqspips_hw.o ps7_cortexa9_0/lib/xgpiops_g.o 
+ps7_cortexa9_0/lib/xsdps.o ps7_cortexa9_0/lib/close.o ps7_cortexa9_0/lib/xgpiops_sinit.o ps7_cortexa9_0/lib/xgpiops_selftest.o 
+ps7_cortexa9_0/lib/xscuwdt.o ps7_cortexa9_0/lib/xaxivdma_g.o ps7_cortexa9_0/lib/xil_clocking.o ps7_cortexa9_0/lib/xiicps_intr.o
+ ps7_cortexa9_0/lib/xaxivdma_sinit.o ps7_cortexa9_0/lib/xcanps_g.o ps7_cortexa9_0/lib/xuartps_sinit.o ps7_cortexa9_0/lib/time.o
+ ps7_cortexa9_0/lib/xaxivdma_selftest.o ps7_cortexa9_0/lib/xiicps_slave.o ps7_cortexa9_0/lib/xcanps_sinit.o ps7_cortexa9_0/lib/
+xil_printf.o ps7_cortexa9_0/lib/xadcps.o ps7_cortexa9_0/lib/xcanps_selftest.o ps7_cortexa9_0/lib/xiicps_options.o ps7_cortexa9_
+0/lib/xuartps_selftest.o ps7_cortexa9_0/lib/lseek.o ps7_cortexa9_0/lib/xil_testmem.o ps7_cortexa9_0/lib/xusbps_hw.o ps7_cortexa
+9_0/lib/xl2cc_counter.o ps7_cortexa9_0/lib/xiicps_hw.o ps7_cortexa9_0/lib/xuartps_g.o ps7_cortexa9_0/lib/asm_vectors.o ps7_cort
+exa9_0/lib/usleep.o ps7_cortexa9_0/lib/xvtc_selftest.o ps7_cortexa9_0/lib/abort.o ps7_cortexa9_0/lib/xscugic_intr.o ps7_cortexa
+9_0/lib/getpid.o ps7_cortexa9_0/lib/xil_testcache.o ps7_cortexa9_0/lib/xdevcfg_sinit.o ps7_cortexa9_0/lib/xdmaps.o ps7_cortexa9
+_0/lib/xscutimer.o ps7_cortexa9_0/lib/xdevcfg_selftest.o ps7_cortexa9_0/lib/xttcps.o ps7_cortexa9_0/lib/xpm_counter.o ps7_corte
+xa9_0/lib/xiicps.o ps7_cortexa9_0/lib/_sbrk.o ps7_cortexa9_0/lib/xiicps_master.o ps7_cortexa9_0/lib/xqspips_g.o ps7_cortexa9_0/
+lib/xgpiops.o ps7_cortexa9_0/lib/xusbps_endpoint.o ps7_cortexa9_0/lib/xusbps_g.o ps7_cortexa9_0/lib/xqspips_sinit.o ps7_cortexa
+9_0/lib/xqspips_selftest.o ps7_cortexa9_0/lib/xil_exception.o ps7_cortexa9_0/lib/sbrk.o ps7_cortexa9_0/lib/xaxivdma.o ps7_corte
+xa9_0/lib/xdevcfg.o ps7_cortexa9_0/lib/open.o ps7_cortexa9_0/lib/xil_assert.o ps7_cortexa9_0/lib/xaxivdma_intr.o ps7_cortexa9_0
+/lib/xcanps.o ps7_cortexa9_0/lib/xusbps_intr.o ps7_cortexa9_0/lib/xsdps_host.o ps7_cortexa9_0/lib/xcoresightpsdcc.o ps7_cortexa
+9_0/lib/xiicps_xfer.o ps7_cortexa9_0/lib/xscugic_hw.o ps7_cortexa9_0/lib/sleep.o ps7_cortexa9_0/lib/xil-crt0.o ps7_cortexa9_0/l
+ib/cpputest_time.o ps7_cortexa9_0/lib/xvtc.o ps7_cortexa9_0/lib/_open.o ps7_cortexa9_0/lib/fcntl.o ps7_cortexa9_0/lib/kill.o ps
+7_cortexa9_0/lib/print.o ps7_cortexa9_0/lib/read.o ps7_cortexa9_0/lib/xadcps_intr.o ps7_cortexa9_0/lib/xqspips.o ps7_cortexa9_0
+/lib/xclk_wiz_g.o ps7_cortexa9_0/lib/xil_cache.o ps7_cortexa9_0/lib/xclk_wiz_sinit.o ps7_cortexa9_0/lib/unlink.o ps7_cortexa9_0
+/lib/xusbps.o ps7_cortexa9_0/lib/xvtc_g.o ps7_cortexa9_0/lib/xil_spinlock.o ps7_cortexa9_0/lib/xiicps_g.o ps7_cortexa9_0/lib/tr
+anslation_table.o ps7_cortexa9_0/lib/write.o ps7_cortexa9_0/lib/xil_mmu.o ps7_cortexa9_0/lib/boot.o ps7_cortexa9_0/lib/xaxivdma
+_channel.o ps7_cortexa9_0/lib/cpu_init.o ps7_cortexa9_0/lib/xsdps_sinit.o ps7_cortexa9_0/lib/xwdtps_g.o ps7_cortexa9_0/lib/xil_
+sleepcommon.o ps7_cortexa9_0/lib/xgpiops_intr.o ps7_cortexa9_0/lib/xscugic_sinit.o ps7_cortexa9_0/lib/xdevcfg_g.o ps7_cortexa9_
+0/lib/outbyte.o ps7_cortexa9_0/lib/xuartps_hw.o ps7_cortexa9_0/lib/xttcps_g.o ps7_cortexa9_0/lib/xtime_l.o ps7_cortexa9_0/lib/x
+ttcps_options.o ps7_cortexa9_0/lib/xcanps_intr.o ps7_cortexa9_0/lib/xwdtps_sinit.o ps7_cortexa9_0/lib/xscugic_selftest.o ps7_co
+rtexa9_0/lib/xil_util.o ps7_cortexa9_0/lib/xuartps_intr.o ps7_cortexa9_0/lib/xuartps.o ps7_cortexa9_0/lib/xwdtps_selftest.o ps7
+_cortexa9_0/lib/xsdps_card.o ps7_cortexa9_0/lib/xdmaps_hw.o ps7_cortexa9_0/lib/xclk_wiz.o ps7_cortexa9_0/lib/xttcps_sinit.o ps7
+_cortexa9_0/lib/xgpiops_hw.o ps7_cortexa9_0/lib/xsdps_g.o ps7_cortexa9_0/lib/fstat.o ps7_cortexa9_0/lib/errno.o ps7_cortexa9_0/
+lib/xdevcfg_intr.o ps7_cortexa9_0/lib/xuartps_options.o ps7_cortexa9_0/lib/vectors.o ps7_cortexa9_0/lib/xscuwdt_g.o ps7_cortexa
+9_0/lib/xclk_wiz_intr.o ps7_cortexa9_0/lib/xscuwdt_sinit.o ps7_cortexa9_0/lib/xcanps_hw.o ps7_cortexa9_0/lib/xscuwdt_selftest.o
+ ps7_cortexa9_0/lib/xvtc_sinit.o ps7_cortexa9_0/lib/xscugic_g.o ps7_cortexa9_0/lib/isatty.o ps7_cortexa9_0/lib/xscugic.o ps7_co
+rtexa9_0/lib/xiicps_sinit.o ps7_cortexa9_0/lib/xadcps_g.o ps7_cortexa9_0/lib/xadcps_sinit.o
+
+'Finished building libraries'
+
+make: Leaving directory 'C:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/zynq_fsbl/zynq_fsbl_bsp'
+
+arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c sd.c -o sd.o -Izynq_fsbl_bsp/ps7_cort
+exa9_0/include -I.
+
+arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c nand.c -o nand.o -Izynq_fsbl_bsp/ps7_
+cortexa9_0/include -I.
+
+arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c nor.c -o nor.o -Izynq_fsbl_bsp/ps7_co
+rtexa9_0/include -I.
+
+arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c image_mover.c -o image_mover.o -Izynq
+_fsbl_bsp/ps7_cortexa9_0/include -I.
+
+arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c md5.c -o md5.o -Izynq_fsbl_bsp/ps7_co
+rtexa9_0/include -I.
+
+arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c fsbl_hooks.c -o fsbl_hooks.o -Izynq_f
+sbl_bsp/ps7_cortexa9_0/include -I.
+
+arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c main.c -o main.o -Izynq_fsbl_bsp/ps7_
+cortexa9_0/include -I.
+
+arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c rsa.c -o rsa.o -Izynq_fsbl_bsp/ps7_co
+rtexa9_0/include -I.
+
+arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c qspi.c -o qspi.o -Izynq_fsbl_bsp/ps7_
+cortexa9_0/include -I.
+
+arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c ps7_init.c -o ps7_init.o -Izynq_fsbl_
+bsp/ps7_cortexa9_0/include -I.
+
+arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c pcap.c -o pcap.o -Izynq_fsbl_bsp/ps7_
+cortexa9_0/include -I.
+
+arm-none-eabi-gcc  -O2 -c -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -c fsbl_handoff.S -o fsbl_handoff.o -Izy
+nq_fsbl_bsp/ps7_cortexa9_0/include -I.
+
+arm-none-eabi-gcc -o fsbl.elf fsbl_handoff.o fsbl_hooks.o image_mover.o main.o md5.o nand.o nor.o pcap.o ps7_init.o qspi.o rsa.
+o sd.o -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id
+=none -specs=Xilinx.spec  -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-
+group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group                                              -Wl,--gc-sections -Lzynq
+_fsbl_bsp/ps7_cortexa9_0/lib -L./ -Tlscript.ld
+
+Building the BSP Library for domain  - freertos10_xilinx_domain on processor ps7_cortexa9_0
+make --no-print-directory seq_libs
+
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_10/src"
+
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_0/src"
+
+make -C ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eab
+i-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard 
+-nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/axi_reg32_v1_0/src"
+
+make -C ps7_cortexa9_0/libsrc/axi_reg32_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+ostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/canps_v3_6/src"
+
+make -C ps7_cortexa9_0/libsrc/canps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/clk_wiz_v1_4/src"
+
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src"
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+ard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src"
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-e
+abi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=har
+d -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_7/src"
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_8/src"
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_10/src"
+
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-n
+one-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-ab
+i=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"includes"
+
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_9/src"
+
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_14/src"
+
+make -C ps7_cortexa9_0/libsrc/iicps_v3_14/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_9/src"
+
+make -C ps7_cortexa9_0/libsrc/qspips_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_6/src"
+
+make -C ps7_cortexa9_0/libsrc/scugic_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_3/src"
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_4/src"
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_13/src"
+
+make -C ps7_cortexa9_0/libsrc/sdps_v3_13/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_14/src"
+
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_14/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_11/src"
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_7/src"
+
+make -C ps7_cortexa9_0/libsrc/usbps_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v8_4/src"
+
+make -C ps7_cortexa9_0/libsrc/vtc_v8_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/wdtps_v3_5/src"
+
+make -C ps7_cortexa9_0/libsrc/wdtps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_6/src"
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_0/src"
+
+make -C ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Compiling axi_i2s_adi..."
+
+axi_i2s_adi_selftest.c: In function 'AXI_I2S_ADI_Reg_SelfTest':
+axi_i2s_adi_selftest.c:52:60: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+   52 |    if ( AXI_I2S_ADI_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+      |                                                            ^~
+axi_i2s_adi_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+   36 |  int Index;
+      |      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/axi_reg32_v1_0/src"
+
+make -C ps7_cortexa9_0/libsrc/axi_reg32_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Compiling axi_reg32..."
+
+axi_reg32_selftest.c: In function 'AXI_REG32_Reg_SelfTest':
+axi_reg32_selftest.c:52:58: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+   52 |    if ( AXI_REG32_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+      |                                                          ^~
+axi_reg32_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+   36 |  int Index;
+      |      ^~~~~
+'Finished building libraries sequentially.'
+
+make -j 6 --no-print-directory par_libs
+
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_10/src"
+
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_0/src"
+
+make -C ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eab
+i-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard 
+-nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/axi_reg32_v1_0/src"
+
+make -C ps7_cortexa9_0/libsrc/axi_reg32_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+ostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/canps_v3_6/src"
+
+make -C ps7_cortexa9_0/libsrc/canps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/clk_wiz_v1_4/src"
+
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src"
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+ard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src"
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-e
+abi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=har
+d -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_7/src"
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_8/src"
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_10/src"
+
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-n
+one-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-ab
+i=hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_9/src"
+
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_14/src"
+
+make -C ps7_cortexa9_0/libsrc/iicps_v3_14/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_9/src"
+
+make -C ps7_cortexa9_0/libsrc/qspips_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_6/src"
+
+make -C ps7_cortexa9_0/libsrc/scugic_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_3/src"
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_4/src"
+
+"includes"
+
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_13/src"
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+make -C ps7_cortexa9_0/libsrc/sdps_v3_13/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_14/src"
+
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_14/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_11/src"
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_7/src"
+
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v8_4/src"
+
+make -C ps7_cortexa9_0/libsrc/usbps_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+make -C ps7_cortexa9_0/libsrc/vtc_v8_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/wdtps_v3_5/src"
+
+make -C ps7_cortexa9_0/libsrc/wdtps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_6/src"
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+ "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v6_10/src"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/canps_v3_6/src"
+
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+make -C ps7_cortexa9_0/libsrc/canps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/clk_wiz_v1_4/src"
+
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src"
+
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+ -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src"
+
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_7/src"
+
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+In file included from ../../../include/xstatus.h:33,
+                 from xclk_wiz.c:35:
+xclk_wiz.c: In function 'XClk_Wiz_SetMinErr':
+../../../include/xil_assert.h:118:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  118 |         return 0;                                  \
+      |                ^
+xclk_wiz.c:299:2: note: in expansion of macro 'Xil_AssertNonvoid'
+  299 |  Xil_AssertNonvoid(InstancePtr != NULL);
+      |  ^~~~~~~~~~~~~~~~~
+xclk_wiz.c:297:6: note: declared here
+  297 | void XClk_Wiz_SetMinErr(XClk_Wiz  *InstancePtr, u64 Minerr)
+      |      ^~~~~~~~~~~~~~~~~~
+In file included from ../../../include/xstatus.h:33,
+                 from xclk_wiz.c:35:
+../../../include/xil_assert.h:118:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  118 |         return 0;                                  \
+      |                ^
+xclk_wiz.c:300:2: note: in expansion of macro 'Xil_AssertNonvoid'
+  300 |  Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+      |  ^~~~~~~~~~~~~~~~~
+xclk_wiz.c:297:6: note: declared here
+  297 | void XClk_Wiz_SetMinErr(XClk_Wiz  *InstancePtr, u64 Minerr)
+      |      ^~~~~~~~~~~~~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_8/src"
+
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_10/src"
+
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+ard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_9/src"
+
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_14/src"
+
+make -C ps7_cortexa9_0/libsrc/iicps_v3_14/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_9/src"
+
+make -C ps7_cortexa9_0/libsrc/qspips_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_6/src"
+
+make -C ps7_cortexa9_0/libsrc/scugic_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_3/src"
+
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_4/src"
+
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_13/src"
+
+make -C ps7_cortexa9_0/libsrc/sdps_v3_13/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_14/src"
+
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_14/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_11/src"
+
+make -C ps7_cortexa9_0/libsrc/uartps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_7/src"
+
+make -C ps7_cortexa9_0/libsrc/usbps_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v8_4/src"
+
+make -C ps7_cortexa9_0/libsrc/vtc_v8_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCH
+IVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfil
+es -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/wdtps_v3_5/src"
+
+make -C ps7_cortexa9_0/libsrc/wdtps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_6/src"
+
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+'Finished building libraries parallelly.'
+
+make --no-print-directory archive
+
+arm-none-eabi-ar -r  ps7_cortexa9_0/lib/libxil.a ps7_cortexa9_0/lib/xadcps_selftest.o ps7_cortexa9_0/lib/xplatform_info.o ps7_c
+ortexa9_0/lib/xil_mem.o ps7_cortexa9_0/lib/xwdtps.o ps7_cortexa9_0/lib/_exit.o ps7_cortexa9_0/lib/xil_testio.o ps7_cortexa9_0/l
+ib/xusbps_sinit.o ps7_cortexa9_0/lib/xiicps_selftest.o ps7_cortexa9_0/lib/xdevcfg_hw.o ps7_cortexa9_0/lib/xil_sleeptimer.o ps7_
+cortexa9_0/lib/xqspips_options.o ps7_cortexa9_0/lib/xdmaps_g.o ps7_cortexa9_0/lib/xscutimer_g.o ps7_cortexa9_0/lib/xsdps_option
+s.o ps7_cortexa9_0/lib/xil_misc_psreset_api.o ps7_cortexa9_0/lib/xdmaps_sinit.o ps7_cortexa9_0/lib/xscutimer_sinit.o ps7_cortex
+a9_0/lib/inbyte.o ps7_cortexa9_0/lib/xdmaps_selftest.o ps7_cortexa9_0/lib/xscutimer_selftest.o ps7_cortexa9_0/lib/xvtc_intr.o p
+s7_cortexa9_0/lib/putnum.o ps7_cortexa9_0/lib/xttcps_selftest.o ps7_cortexa9_0/lib/xqspips_hw.o ps7_cortexa9_0/lib/xgpiops_g.o 
+ps7_cortexa9_0/lib/xsdps.o ps7_cortexa9_0/lib/close.o ps7_cortexa9_0/lib/xgpiops_sinit.o ps7_cortexa9_0/lib/xgpiops_selftest.o 
+ps7_cortexa9_0/lib/xscuwdt.o ps7_cortexa9_0/lib/xaxivdma_g.o ps7_cortexa9_0/lib/xil_clocking.o ps7_cortexa9_0/lib/xclk_wiz_intr
+.o ps7_cortexa9_0/lib/xiicps_intr.o ps7_cortexa9_0/lib/xaxivdma_sinit.o ps7_cortexa9_0/lib/xcanps_g.o ps7_cortexa9_0/lib/xuartp
+s_sinit.o ps7_cortexa9_0/lib/time.o ps7_cortexa9_0/lib/xaxivdma_selftest.o ps7_cortexa9_0/lib/xiicps_slave.o ps7_cortexa9_0/lib
+/xcanps_sinit.o ps7_cortexa9_0/lib/xil_printf.o ps7_cortexa9_0/lib/xadcps.o ps7_cortexa9_0/lib/xcanps_selftest.o ps7_cortexa9_0
+/lib/xiicps_options.o ps7_cortexa9_0/lib/xuartps_selftest.o ps7_cortexa9_0/lib/outbyte.o ps7_cortexa9_0/lib/lseek.o ps7_cortexa
+9_0/lib/xil_testmem.o ps7_cortexa9_0/lib/xusbps_hw.o ps7_cortexa9_0/lib/xl2cc_counter.o ps7_cortexa9_0/lib/xiicps_hw.o ps7_cort
+exa9_0/lib/xuartps_g.o ps7_cortexa9_0/lib/usleep.o ps7_cortexa9_0/lib/xvtc_selftest.o ps7_cortexa9_0/lib/abort.o ps7_cortexa9_0
+/lib/xscugic_intr.o ps7_cortexa9_0/lib/getpid.o ps7_cortexa9_0/lib/xil_testcache.o ps7_cortexa9_0/lib/xdevcfg_sinit.o ps7_corte
+xa9_0/lib/xdmaps.o ps7_cortexa9_0/lib/xscutimer.o ps7_cortexa9_0/lib/xdevcfg_selftest.o ps7_cortexa9_0/lib/xttcps.o ps7_cortexa
+9_0/lib/xpm_counter.o ps7_cortexa9_0/lib/xiicps.o ps7_cortexa9_0/lib/_sbrk.o ps7_cortexa9_0/lib/xiicps_master.o ps7_cortexa9_0/
+lib/xqspips_g.o ps7_cortexa9_0/lib/xgpiops.o ps7_cortexa9_0/lib/xusbps_endpoint.o ps7_cortexa9_0/lib/xusbps_g.o ps7_cortexa9_0/
+lib/xqspips_sinit.o ps7_cortexa9_0/lib/xqspips_selftest.o ps7_cortexa9_0/lib/xil_exception.o ps7_cortexa9_0/lib/sbrk.o ps7_cort
+exa9_0/lib/xaxivdma.o ps7_cortexa9_0/lib/open.o ps7_cortexa9_0/lib/xil_assert.o ps7_cortexa9_0/lib/xaxivdma_intr.o ps7_cortexa9
+_0/lib/xcanps.o ps7_cortexa9_0/lib/xusbps_intr.o ps7_cortexa9_0/lib/xsdps_host.o ps7_cortexa9_0/lib/xcoresightpsdcc.o ps7_corte
+xa9_0/lib/xiicps_xfer.o ps7_cortexa9_0/lib/xscugic_hw.o ps7_cortexa9_0/lib/sleep.o ps7_cortexa9_0/lib/cpputest_time.o ps7_corte
+xa9_0/lib/xvtc.o ps7_cortexa9_0/lib/_open.o ps7_cortexa9_0/lib/kill.o ps7_cortexa9_0/lib/print.o ps7_cortexa9_0/lib/read.o ps7_
+cortexa9_0/lib/xdevcfg.o ps7_cortexa9_0/lib/xadcps_intr.o ps7_cortexa9_0/lib/xqspips.o ps7_cortexa9_0/lib/xclk_wiz_g.o ps7_cort
+exa9_0/lib/xil_cache.o ps7_cortexa9_0/lib/xclk_wiz_sinit.o ps7_cortexa9_0/lib/unlink.o ps7_cortexa9_0/lib/xusbps.o ps7_cortexa9
+_0/lib/xvtc_g.o ps7_cortexa9_0/lib/xil_spinlock.o ps7_cortexa9_0/lib/xiicps_g.o ps7_cortexa9_0/lib/translation_table.o ps7_cort
+exa9_0/lib/write.o ps7_cortexa9_0/lib/xil_mmu.o ps7_cortexa9_0/lib/boot.o ps7_cortexa9_0/lib/xaxivdma_channel.o ps7_cortexa9_0/
+lib/cpu_init.o ps7_cortexa9_0/lib/xsdps_sinit.o ps7_cortexa9_0/lib/xwdtps_g.o ps7_cortexa9_0/lib/xil_sleepcommon.o ps7_cortexa9
+_0/lib/xvtc_sinit.o ps7_cortexa9_0/lib/xgpiops_intr.o ps7_cortexa9_0/lib/xscugic_sinit.o ps7_cortexa9_0/lib/fcntl.o ps7_cortexa
+9_0/lib/xdevcfg_g.o ps7_cortexa9_0/lib/xuartps_hw.o ps7_cortexa9_0/lib/xttcps_g.o ps7_cortexa9_0/lib/xtime_l.o ps7_cortexa9_0/l
+ib/xttcps_options.o ps7_cortexa9_0/lib/xcanps_intr.o ps7_cortexa9_0/lib/xwdtps_sinit.o ps7_cortexa9_0/lib/xscugic_selftest.o ps
+7_cortexa9_0/lib/xil_util.o ps7_cortexa9_0/lib/xuartps_intr.o ps7_cortexa9_0/lib/xuartps.o ps7_cortexa9_0/lib/xwdtps_selftest.o
+ ps7_cortexa9_0/lib/xsdps_card.o ps7_cortexa9_0/lib/xdmaps_hw.o ps7_cortexa9_0/lib/xclk_wiz.o ps7_cortexa9_0/lib/xttcps_sinit.o
+ ps7_cortexa9_0/lib/xgpiops_hw.o ps7_cortexa9_0/lib/xsdps_g.o ps7_cortexa9_0/lib/fstat.o ps7_cortexa9_0/lib/errno.o ps7_cortexa
+9_0/lib/xdevcfg_intr.o ps7_cortexa9_0/lib/xuartps_options.o ps7_cortexa9_0/lib/vectors.o ps7_cortexa9_0/lib/xscuwdt_g.o ps7_cor
+texa9_0/lib/xscuwdt_sinit.o ps7_cortexa9_0/lib/xcanps_hw.o ps7_cortexa9_0/lib/xscuwdt_selftest.o ps7_cortexa9_0/lib/xscugic_g.o
+ ps7_cortexa9_0/lib/isatty.o ps7_cortexa9_0/lib/xil-crt0.o ps7_cortexa9_0/lib/xscugic.o ps7_cortexa9_0/lib/xiicps_sinit.o ps7_c
+ortexa9_0/lib/xadcps_g.o ps7_cortexa9_0/lib/xadcps_sinit.o
+
+'Finished building libraries'
+
+10:37:40 **** Incremental Build of configuration Debug for project test ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
+'Building file: ../src/can_driver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"src/can_driver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/can_driver.d" -MT"src/can_driver.o" -o "src/can_driver.o" "../src/can_driver.c"
+../src/can_driver.c: In function 'csp_iface_can_init':
+../src/can_driver.c:588:27: warning: assignment to 'csp_can_driver_tx_t' {aka 'int (*)(void *, long unsigned int,  const unsigned char *, unsigned char)'} from incompatible pointer type 'void (*)(csp_iface_t *, uint32_t,  uint8_t *, uint8_t)' {aka 'void (*)(struct csp_iface_s *, long unsigned int,  unsigned char *, unsigned char)'} [-Wincompatible-pointer-types]
+  588 |  xilCanInt.ifdata.tx_func = canHopper;
+      |                           ^
+../src/can_driver.c: In function 'cspSender':
+../src/can_driver.c:656:9: warning: implicit declaration of function 'csp_can2_tx'; did you mean 'csp_can_tx'? [-Wimplicit-function-declaration]
+  656 |  return csp_can2_tx(&xilCanInt.interface, 1, Packet);
+      |         ^~~~~~~~~~~
+      |         csp_can_tx
+'Finished building: ../src/can_driver.c'
+' '
+'Building file: ../src/csp_hook_xil.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"src/csp_hook_xil.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/csp_hook_xil.d" -MT"src/csp_hook_xil.o" -o "src/csp_hook_xil.o" "../src/csp_hook_xil.c"
+'Finished building: ../src/csp_hook_xil.c'
+' '
+'Building file: ../src/gpio_ctrl.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"src/gpio_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/gpio_ctrl.d" -MT"src/gpio_ctrl.o" -o "src/gpio_ctrl.o" "../src/gpio_ctrl.c"
+'Finished building: ../src/gpio_ctrl.c'
+' '
 'Building file: ../src/main.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -IC:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test\lib" -I"C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test\lib\csp\include" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 'Finished building: ../src/main.c'
+' '
+'Building file: ../src/staticrtos.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"src/staticrtos.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/staticrtos.d" -MT"src/staticrtos.o" -o "src/staticrtos.o" "../src/staticrtos.c"
+'Finished building: ../src/staticrtos.c'
+' '
+'Building file: ../src/te_fsbl_hooks.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"src/te_fsbl_hooks.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/te_fsbl_hooks.d" -MT"src/te_fsbl_hooks.o" -o "src/te_fsbl_hooks.o" "../src/te_fsbl_hooks.c"
+'Finished building: ../src/te_fsbl_hooks.c'
+' '
+'Building file: ../src/te_vdma.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"src/te_vdma.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/te_vdma.d" -MT"src/te_vdma.o" -o "src/te_vdma.o" "../src/te_vdma.c"
+'Finished building: ../src/te_vdma.c'
+' '
+'Building file: ../src/vdma.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"src/vdma.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/vdma.d" -MT"src/vdma.o" -o "src/vdma.o" "../src/vdma.c"
+../src/vdma.c: In function 'EnableVideoTimingController':
+../src/vdma.c:101:56: warning: passing argument 2 of 'vdma_out_init' makes integer from pointer without a cast [-Wint-conversion]
+  101 |     vdma_out_init(XPAR_VIDEO_OUT_AXI_VDMA_0_DEVICE_ID, &VideoBuffer, 1920, 1080, 4);
+      |                                                        ^~~~~~~~~~~~
+      |                                                        |
+      |                                                        unsigned char (*)[8294400]
+In file included from ../src/vdma.c:12:
+../src/te_vdma.h:13:39: note: expected 'int' but argument is of type 'unsigned char (*)[8294400]'
+   13 | int vdma_out_init(short DeviceID, int base_address, int h_width, int v_width, int bpp);
+      |                                   ~~~~^~~~~~~~~~~~
+../src/vdma.c:105:54: warning: passing argument 2 of 'vdma_in_init' makes integer from pointer without a cast [-Wint-conversion]
+  105 |     vdma_in_init(XPAR_VIDEO_IN_AXI_VDMA_0_DEVICE_ID, &VideoBuffer, 1920, 1080, 4, &VideoBuffer1);
+      |                                                      ^~~~~~~~~~~~
+      |                                                      |
+      |                                                      unsigned char (*)[8294400]
+In file included from ../src/vdma.c:12:
+../src/te_vdma.h:14:38: note: expected 'int' but argument is of type 'unsigned char (*)[8294400]'
+   14 | int vdma_in_init(short DeviceID, int base_address, int h_width, int v_width, int bpp, int base_address2);
+      |                                  ~~~~^~~~~~~~~~~~
+../src/vdma.c:105:83: warning: passing argument 6 of 'vdma_in_init' makes integer from pointer without a cast [-Wint-conversion]
+  105 |     vdma_in_init(XPAR_VIDEO_IN_AXI_VDMA_0_DEVICE_ID, &VideoBuffer, 1920, 1080, 4, &VideoBuffer1);
+      |                                                                                   ^~~~~~~~~~~~~
+      |                                                                                   |
+      |                                                                                   unsigned char (*)[8294400]
+In file included from ../src/vdma.c:12:
+../src/te_vdma.h:14:91: note: expected 'int' but argument is of type 'unsigned char (*)[8294400]'
+   14 | int vdma_in_init(short DeviceID, int base_address, int h_width, int v_width, int bpp, int base_address2);
+      |                                                                                       ~~~~^~~~~~~~~~~~~
+'Finished building: ../src/vdma.c'
+' '
+'Building file: ../lib/csp/src/interfaces/csp_if_can.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/interfaces/csp_if_can.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/interfaces/csp_if_can.d" -MT"lib/csp/src/interfaces/csp_if_can.o" -o "lib/csp/src/interfaces/csp_if_can.o" "../lib/csp/src/interfaces/csp_if_can.c"
+'Finished building: ../lib/csp/src/interfaces/csp_if_can.c'
+' '
+'Building file: ../lib/csp/src/interfaces/csp_if_can_pbuf.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/interfaces/csp_if_can_pbuf.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/interfaces/csp_if_can_pbuf.d" -MT"lib/csp/src/interfaces/csp_if_can_pbuf.o" -o "lib/csp/src/interfaces/csp_if_can_pbuf.o" "../lib/csp/src/interfaces/csp_if_can_pbuf.c"
+'Finished building: ../lib/csp/src/interfaces/csp_if_can_pbuf.c'
+' '
+'Building file: ../lib/csp/src/interfaces/csp_if_i2c.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/interfaces/csp_if_i2c.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/interfaces/csp_if_i2c.d" -MT"lib/csp/src/interfaces/csp_if_i2c.o" -o "lib/csp/src/interfaces/csp_if_i2c.o" "../lib/csp/src/interfaces/csp_if_i2c.c"
+'Finished building: ../lib/csp/src/interfaces/csp_if_i2c.c'
+' '
+'Building file: ../lib/csp/src/interfaces/csp_if_lo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/interfaces/csp_if_lo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/interfaces/csp_if_lo.d" -MT"lib/csp/src/interfaces/csp_if_lo.o" -o "lib/csp/src/interfaces/csp_if_lo.o" "../lib/csp/src/interfaces/csp_if_lo.c"
+'Finished building: ../lib/csp/src/interfaces/csp_if_lo.c'
+' '
+'Building file: ../lib/csp/src/interfaces/csp_if_tun.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/interfaces/csp_if_tun.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/interfaces/csp_if_tun.d" -MT"lib/csp/src/interfaces/csp_if_tun.o" -o "lib/csp/src/interfaces/csp_if_tun.o" "../lib/csp/src/interfaces/csp_if_tun.c"
+'Finished building: ../lib/csp/src/interfaces/csp_if_tun.c'
+' '
+'Building file: ../lib/csp/src/interfaces/csp_if_zmqhub.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/interfaces/csp_if_zmqhub.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/interfaces/csp_if_zmqhub.d" -MT"lib/csp/src/interfaces/csp_if_zmqhub.o" -o "lib/csp/src/interfaces/csp_if_zmqhub.o" "../lib/csp/src/interfaces/csp_if_zmqhub.c"
+'Finished building: ../lib/csp/src/interfaces/csp_if_zmqhub.c'
+' '
+'Building file: ../lib/csp/src/crypto/csp_hmac.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/crypto/csp_hmac.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/crypto/csp_hmac.d" -MT"lib/csp/src/crypto/csp_hmac.o" -o "lib/csp/src/crypto/csp_hmac.o" "../lib/csp/src/crypto/csp_hmac.c"
+'Finished building: ../lib/csp/src/crypto/csp_hmac.c'
+' '
+'Building file: ../lib/csp/src/crypto/csp_sha1.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/crypto/csp_sha1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/crypto/csp_sha1.d" -MT"lib/csp/src/crypto/csp_sha1.o" -o "lib/csp/src/crypto/csp_sha1.o" "../lib/csp/src/crypto/csp_sha1.c"
+'Finished building: ../lib/csp/src/crypto/csp_sha1.c'
+' '
+'Building file: ../lib/csp/src/arch/freertos/csp_clock.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/arch/freertos/csp_clock.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/arch/freertos/csp_clock.d" -MT"lib/csp/src/arch/freertos/csp_clock.o" -o "lib/csp/src/arch/freertos/csp_clock.o" "../lib/csp/src/arch/freertos/csp_clock.c"
+'Finished building: ../lib/csp/src/arch/freertos/csp_clock.c'
+' '
+'Building file: ../lib/csp/src/arch/freertos/csp_queue.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/arch/freertos/csp_queue.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/arch/freertos/csp_queue.d" -MT"lib/csp/src/arch/freertos/csp_queue.o" -o "lib/csp/src/arch/freertos/csp_queue.o" "../lib/csp/src/arch/freertos/csp_queue.c"
+'Finished building: ../lib/csp/src/arch/freertos/csp_queue.c'
+' '
+'Building file: ../lib/csp/src/arch/freertos/csp_semaphore.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/arch/freertos/csp_semaphore.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/arch/freertos/csp_semaphore.d" -MT"lib/csp/src/arch/freertos/csp_semaphore.o" -o "lib/csp/src/arch/freertos/csp_semaphore.o" "../lib/csp/src/arch/freertos/csp_semaphore.c"
+'Finished building: ../lib/csp/src/arch/freertos/csp_semaphore.c'
+' '
+'Building file: ../lib/csp/src/arch/freertos/csp_system.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/arch/freertos/csp_system.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/arch/freertos/csp_system.d" -MT"lib/csp/src/arch/freertos/csp_system.o" -o "lib/csp/src/arch/freertos/csp_system.o" "../lib/csp/src/arch/freertos/csp_system.c"
+'Finished building: ../lib/csp/src/arch/freertos/csp_system.c'
+' '
+'Building file: ../lib/csp/src/arch/freertos/csp_time.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/arch/freertos/csp_time.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/arch/freertos/csp_time.d" -MT"lib/csp/src/arch/freertos/csp_time.o" -o "lib/csp/src/arch/freertos/csp_time.o" "../lib/csp/src/arch/freertos/csp_time.c"
+'Finished building: ../lib/csp/src/arch/freertos/csp_time.c'
+' '
+'Building file: ../lib/csp/src/csp_bridge.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_bridge.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_bridge.d" -MT"lib/csp/src/csp_bridge.o" -o "lib/csp/src/csp_bridge.o" "../lib/csp/src/csp_bridge.c"
+'Finished building: ../lib/csp/src/csp_bridge.c'
+' '
+'Building file: ../lib/csp/src/csp_buffer.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_buffer.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_buffer.d" -MT"lib/csp/src/csp_buffer.o" -o "lib/csp/src/csp_buffer.o" "../lib/csp/src/csp_buffer.c"
+'Finished building: ../lib/csp/src/csp_buffer.c'
+' '
+'Building file: ../lib/csp/src/csp_conn.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_conn.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_conn.d" -MT"lib/csp/src/csp_conn.o" -o "lib/csp/src/csp_conn.o" "../lib/csp/src/csp_conn.c"
+'Finished building: ../lib/csp/src/csp_conn.c'
+' '
+'Building file: ../lib/csp/src/csp_crc32.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_crc32.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_crc32.d" -MT"lib/csp/src/csp_crc32.o" -o "lib/csp/src/csp_crc32.o" "../lib/csp/src/csp_crc32.c"
+'Finished building: ../lib/csp/src/csp_crc32.c'
+' '
+'Building file: ../lib/csp/src/csp_debug.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_debug.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_debug.d" -MT"lib/csp/src/csp_debug.o" -o "lib/csp/src/csp_debug.o" "../lib/csp/src/csp_debug.c"
+'Finished building: ../lib/csp/src/csp_debug.c'
+' '
+'Building file: ../lib/csp/src/csp_dedup.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_dedup.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_dedup.d" -MT"lib/csp/src/csp_dedup.o" -o "lib/csp/src/csp_dedup.o" "../lib/csp/src/csp_dedup.c"
+'Finished building: ../lib/csp/src/csp_dedup.c'
+' '
+'Building file: ../lib/csp/src/csp_hex_dump.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_hex_dump.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_hex_dump.d" -MT"lib/csp/src/csp_hex_dump.o" -o "lib/csp/src/csp_hex_dump.o" "../lib/csp/src/csp_hex_dump.c"
+'Finished building: ../lib/csp/src/csp_hex_dump.c'
+' '
+'Building file: ../lib/csp/src/csp_id.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_id.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_id.d" -MT"lib/csp/src/csp_id.o" -o "lib/csp/src/csp_id.o" "../lib/csp/src/csp_id.c"
+'Finished building: ../lib/csp/src/csp_id.c'
+' '
+'Building file: ../lib/csp/src/csp_iflist.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_iflist.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_iflist.d" -MT"lib/csp/src/csp_iflist.o" -o "lib/csp/src/csp_iflist.o" "../lib/csp/src/csp_iflist.c"
+'Finished building: ../lib/csp/src/csp_iflist.c'
+' '
+'Building file: ../lib/csp/src/csp_init.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_init.d" -MT"lib/csp/src/csp_init.o" -o "lib/csp/src/csp_init.o" "../lib/csp/src/csp_init.c"
+'Finished building: ../lib/csp/src/csp_init.c'
+' '
+'Building file: ../lib/csp/src/csp_io.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_io.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_io.d" -MT"lib/csp/src/csp_io.o" -o "lib/csp/src/csp_io.o" "../lib/csp/src/csp_io.c"
+'Finished building: ../lib/csp/src/csp_io.c'
+' '
+'Building file: ../lib/csp/src/csp_port.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_port.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_port.d" -MT"lib/csp/src/csp_port.o" -o "lib/csp/src/csp_port.o" "../lib/csp/src/csp_port.c"
+'Finished building: ../lib/csp/src/csp_port.c'
+' '
+'Building file: ../lib/csp/src/csp_promisc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_promisc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_promisc.d" -MT"lib/csp/src/csp_promisc.o" -o "lib/csp/src/csp_promisc.o" "../lib/csp/src/csp_promisc.c"
+'Finished building: ../lib/csp/src/csp_promisc.c'
+' '
+'Building file: ../lib/csp/src/csp_qfifo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_qfifo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_qfifo.d" -MT"lib/csp/src/csp_qfifo.o" -o "lib/csp/src/csp_qfifo.o" "../lib/csp/src/csp_qfifo.c"
+'Finished building: ../lib/csp/src/csp_qfifo.c'
+' '
+'Building file: ../lib/csp/src/csp_rdp.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_rdp.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_rdp.d" -MT"lib/csp/src/csp_rdp.o" -o "lib/csp/src/csp_rdp.o" "../lib/csp/src/csp_rdp.c"
+'Finished building: ../lib/csp/src/csp_rdp.c'
+' '
+'Building file: ../lib/csp/src/csp_rdp_queue.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_rdp_queue.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_rdp_queue.d" -MT"lib/csp/src/csp_rdp_queue.o" -o "lib/csp/src/csp_rdp_queue.o" "../lib/csp/src/csp_rdp_queue.c"
+'Finished building: ../lib/csp/src/csp_rdp_queue.c'
+' '
+'Building file: ../lib/csp/src/csp_route.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_route.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_route.d" -MT"lib/csp/src/csp_route.o" -o "lib/csp/src/csp_route.o" "../lib/csp/src/csp_route.c"
+'Finished building: ../lib/csp/src/csp_route.c'
+' '
+'Building file: ../lib/csp/src/csp_rtable_cidr.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_rtable_cidr.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_rtable_cidr.d" -MT"lib/csp/src/csp_rtable_cidr.o" -o "lib/csp/src/csp_rtable_cidr.o" "../lib/csp/src/csp_rtable_cidr.c"
+'Finished building: ../lib/csp/src/csp_rtable_cidr.c'
+' '
+'Building file: ../lib/csp/src/csp_rtable_stdio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_rtable_stdio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_rtable_stdio.d" -MT"lib/csp/src/csp_rtable_stdio.o" -o "lib/csp/src/csp_rtable_stdio.o" "../lib/csp/src/csp_rtable_stdio.c"
+'Finished building: ../lib/csp/src/csp_rtable_stdio.c'
+' '
+'Building file: ../lib/csp/src/csp_service_handler.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_service_handler.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_service_handler.d" -MT"lib/csp/src/csp_service_handler.o" -o "lib/csp/src/csp_service_handler.o" "../lib/csp/src/csp_service_handler.c"
+'Finished building: ../lib/csp/src/csp_service_handler.c'
+' '
+'Building file: ../lib/csp/src/csp_services.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_services.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_services.d" -MT"lib/csp/src/csp_services.o" -o "lib/csp/src/csp_services.o" "../lib/csp/src/csp_services.c"
+'Finished building: ../lib/csp/src/csp_services.c'
+' '
+'Building file: ../lib/csp/src/csp_sfp.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib" -I"C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\test\lib\csp\include" -c -fmessage-length=0 -MT"lib/csp/src/csp_sfp.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"lib/csp/src/csp_sfp.d" -MT"lib/csp/src/csp_sfp.o" -o "lib/csp/src/csp_sfp.o" "../lib/csp/src/csp_sfp.c"
+'Finished building: ../lib/csp/src/csp_sfp.c'
 ' '
 'Building target: test.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -LC:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bsplib/lib -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -o "test.elf"  ./src/can_driver.o ./src/csp_hook_xil.o ./src/gpio_ctrl.o ./src/main.o ./src/staticrtos.o ./src/te_fsbl_hooks.o ./src/te_vdma.o ./src/vdma.o  ./lib/csp/src/interfaces/csp_if_can.o ./lib/csp/src/interfaces/csp_if_can_pbuf.o ./lib/csp/src/interfaces/csp_if_i2c.o ./lib/csp/src/interfaces/csp_if_lo.o ./lib/csp/src/interfaces/csp_if_tun.o ./lib/csp/src/interfaces/csp_if_zmqhub.o  ./lib/csp/src/crypto/csp_hmac.o ./lib/csp/src/crypto/csp_sha1.o  ./lib/csp/src/arch/freertos/csp_clock.o ./lib/csp/src/arch/freertos/csp_queue.o ./lib/csp/src/arch/freertos/csp_semaphore.o ./lib/csp/src/arch/freertos/csp_system.o ./lib/csp/src/arch/freertos/csp_time.o  ./lib/csp/src/csp_bridge.o ./lib/csp/src/csp_buffer.o ./lib/csp/src/csp_conn.o ./lib/csp/src/csp_crc32.o ./lib/csp/src/csp_debug.o ./lib/csp/src/csp_dedup.o ./lib/csp/src/csp_hex_dump.o ./lib/csp/src/csp_id.o ./lib/csp/src/csp_iflist.o ./lib/csp/src/csp_init.o ./lib/csp/src/csp_io.o ./lib/csp/src/csp_port.o ./lib/csp/src/csp_promisc.o ./lib/csp/src/csp_qfifo.o ./lib/csp/src/csp_rdp.o ./lib/csp/src/csp_rdp_queue.o ./lib/csp/src/csp_route.o ./lib/csp/src/csp_rtable_cidr.o ./lib/csp/src/csp_rtable_stdio.o ./lib/csp/src/csp_service_handler.o ./lib/csp/src/csp_services.o ./lib/csp/src/csp_sfp.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -LC:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bsplib/lib -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -o "test.elf"  ./src/can_driver.o ./src/csp_hook_xil.o ./src/gpio_ctrl.o ./src/main.o ./src/staticrtos.o ./src/te_fsbl_hooks.o ./src/te_vdma.o ./src/vdma.o  ./lib/csp/src/interfaces/csp_if_can.o ./lib/csp/src/interfaces/csp_if_can_pbuf.o ./lib/csp/src/interfaces/csp_if_i2c.o ./lib/csp/src/interfaces/csp_if_lo.o ./lib/csp/src/interfaces/csp_if_tun.o ./lib/csp/src/interfaces/csp_if_zmqhub.o  ./lib/csp/src/crypto/csp_hmac.o ./lib/csp/src/crypto/csp_sha1.o  ./lib/csp/src/arch/freertos/csp_clock.o ./lib/csp/src/arch/freertos/csp_queue.o ./lib/csp/src/arch/freertos/csp_semaphore.o ./lib/csp/src/arch/freertos/csp_system.o ./lib/csp/src/arch/freertos/csp_time.o  ./lib/csp/src/csp_bridge.o ./lib/csp/src/csp_buffer.o ./lib/csp/src/csp_conn.o ./lib/csp/src/csp_crc32.o ./lib/csp/src/csp_debug.o ./lib/csp/src/csp_dedup.o ./lib/csp/src/csp_hex_dump.o ./lib/csp/src/csp_id.o ./lib/csp/src/csp_iflist.o ./lib/csp/src/csp_init.o ./lib/csp/src/csp_io.o ./lib/csp/src/csp_port.o ./lib/csp/src/csp_promisc.o ./lib/csp/src/csp_qfifo.o ./lib/csp/src/csp_rdp.o ./lib/csp/src/csp_rdp_queue.o ./lib/csp/src/csp_route.o ./lib/csp/src/csp_rtable_cidr.o ./lib/csp/src/csp_rtable_stdio.o ./lib/csp/src/csp_service_handler.o ./lib/csp/src/csp_services.o ./lib/csp/src/csp_sfp.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
 'Finished building target: test.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 221436	   9152	24981344	25211932	180b41c	test.elf
+ 221500	   9152	24981344	25211996	180b45c	test.elf
 'Finished building: test.elf.size'
 ' '
-16:06:24 **** Incremental Build of configuration Debug for project test_system ****
+10:38:07 **** Incremental Build of configuration Debug for project test_system ****
 make all 
 Generate SD card image option is not selected

@@ -33,3 +33,4 @@ platform generate
 platform active {csptest}
 platform config -updatehw {C:/School/Vivado/ZynqDemoRemake/vivado/zsys_wrapper.xsa}
 platform generate -domains 
+platform generate -domains freertos10_xilinx_domain,zynq_fsbl 

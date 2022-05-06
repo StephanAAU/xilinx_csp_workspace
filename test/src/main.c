@@ -127,12 +127,15 @@ static void vIdleTask( void *pvParameters )
 		vTaskDelay( x1second );
 		cntr++;
 		if (csp_qfifo_read(&inputQueue) == 0){
+			if (inputQueue.packet->id.sport <= 0 && inputQueue.packet->id.sport >= 6){
+				serviceToDo(inputQueue.packet);
+			} else {
 			if (inputQueue.packet->data[0] == 0x1) {
-				if (inputQueue.packet->data[1] == 0x1) {
-					xSemaphoreGive( xCam_TakePicture );
+					if (inputQueue.packet->data[1] == 0x1) {
+						xSemaphoreGive( xCam_TakePicture );
+					}
 				}
 			}
-
 		} else{
 			xil_printf("%d..\r\n", cntr);
 		}
