@@ -66,7 +66,7 @@ int main( void )
 
 	csp_qfifo_init(); // Seems to make it work ???
 
-	csp_iface_can_init(0x1C1F, 0, 500000);
+	csp_iface_can_init(0x1C1F, 8, 500000);
 
 
 	//xilSendLongCFPFrame(0x1C3B, 0x0F, 0x0F, 0x1D, &Test);

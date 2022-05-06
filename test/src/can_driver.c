@@ -587,6 +587,9 @@ void csp_iface_can_init(int addr, int netmask, uint32_t bitrate) {
 
 	xilCanInt.ifdata.tx_func = canHopper;
 
+	xilCanInt.interface.nexthop = csp_can2_tx;
+
+	xilCanInt.interface.netmask = netmask;
 
 	/* The MTU is configured run-time, since the buffer size can be configured externally
 	 * however, it must not exceed 2042 due to the CFP_REMAIN field limitation
