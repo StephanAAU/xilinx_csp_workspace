@@ -5856,3 +5856,11 @@ con
 10:37:29 INFO  : Result from executing command 'getProjects': csptest
 10:37:29 INFO  : Result from executing command 'getPlatforms': csptest|C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/export/csptest/csptest.xpfm
 10:37:30 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:35:14 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\temp_xsdb_launch_script.tcl
+11:35:18 INFO  : Registering command handlers for Vitis TCF services
+11:35:18 INFO  : Platform repository initialization has completed.
+11:35:19 INFO  : XSCT server has started successfully.
+11:35:19 INFO  : plnx-install-location is set to ''
+11:35:19 INFO  : Successfully done setting XSCT server connection channel  
+11:35:19 INFO  : Successfully done query RDI_DATADIR 
+11:35:19 INFO  : Successfully done setting workspace for the tool. 
