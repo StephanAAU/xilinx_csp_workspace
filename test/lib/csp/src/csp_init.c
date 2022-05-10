@@ -12,9 +12,9 @@
 csp_conf_t csp_conf = {
 	.version = 2,
 	.address = 3000,
-	.hostname = "",
-	.model = "",
-	.revision = "",
+	.hostname = "ClientExample",
+	.model = "2",
+	.revision = ".3",
 	.conn_dfl_so = CSP_O_NONE,
 	.dedup = CSP_DEDUP_OFF};
 

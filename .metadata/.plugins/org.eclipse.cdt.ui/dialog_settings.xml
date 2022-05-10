@@ -15,6 +15,9 @@
 		<item key="caseSensitive" value="false"/>
 		<item key="searchFlags" value="227191"/>
 		<list key="previousPatterns">
+			<item value="csp_socket_s"/>
+			<item value="CSP_CONNECTION_OPTIONS"/>
+			<item value="csp_services"/>
 			<item value="CFPID"/>
 			<item value="packet"/>
 			<item value="CFP2_SENDER_MASK"/>

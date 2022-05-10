@@ -479,11 +479,16 @@ void canHopper(csp_iface_t *iface, uint32_t CFPID, uint8_t* frameBuf, uint8_t fr
 	TxFrame[2] = (frameBuf[3]<<24)|(frameBuf[2]<<16)|(frameBuf[1]<<8)|(frameBuf[0]);
 
 
-	// Put the last four bytes of the frameBuf into the Dataword 2 register frame
-	int i = 0;
-	for (i = 0; i  < frameBufInp-4; i++ ){
-		TxFrame[3] |= frameBuf[i + 4]<<(i*8);
-	}
+//	// Put the last four bytes of the frameBuf into the Dataword 2 register frame
+//	int i = 0;
+//	for (i = 0; i  < frameBufInp; i++ ){
+//		if (i/4 == 0){
+//			TxFrame[2] |= frameBuf[i]<<(i*8);
+//		} else{
+//			TxFrame[3] |= frameBuf[i]<<(i*8);
+//		}
+//
+//	}
 
 	TxFrame[3] = (frameBuf[7]<<24)|(frameBuf[6]<<16)|(frameBuf[5]<<8)|(frameBuf[4]);
 
@@ -583,8 +588,11 @@ void csp_iface_can_init(int addr, int netmask, uint32_t bitrate) {
 	/* Create a mutex type semaphore. */
 	 xilCanInt.lock = xSemaphoreCreateBinary();
 
+	 /* Setup the tx function of the interface. */
 	xilCanInt.ifdata.tx_func = canHopper;
 
+	/* Set up the subnet*/
+	xilCanInt.interface.netmask = netmask;
 
 	/* The MTU of the CAN system is limited by the number of bits in the fragmentation counter
 	 * As there are 3 bits in the fragmentation field the number of fragments possible is
@@ -607,9 +615,9 @@ void csp_iface_can_init(int addr, int netmask, uint32_t bitrate) {
 
 
 
-
 int cspSender(uint8_t* dataToSend, uint8_t dataLength, uint16_t destination, uint8_t sourceP, uint8_t destP,
 		uint8_t cspFlag){
+
 
 	// Initiate packet
 	csp_packet_t * Packet;
@@ -621,8 +629,6 @@ int cspSender(uint8_t* dataToSend, uint8_t dataLength, uint16_t destination, uin
 	if (Packet == NULL){
 		return CSP_DBG_CAN_PBUF_NO_FIND;
 	}
-
-
 
 	// Check for overflow and return error should it happen
 	if (dataLength > xilCanInt.interface.mtu){
@@ -648,9 +654,13 @@ int cspSender(uint8_t* dataToSend, uint8_t dataLength, uint16_t destination, uin
 	Packet->id.flags = cspFlag;
 	Packet->id.pri = 0x0;
 
-	// Call the csp tx function through return.
-	return csp_can2_tx(&xilCanInt.interface, 1, Packet);
+	csp_conn_t * CSPConnect = csp_connect(0x00, destination, destP, CSP_MAX_TIMEOUT,0);
 
+
+	// Call the csp tx function through return.
+	csp_send(CSPConnect, Packet);
+
+	return 1;
 }
 
 

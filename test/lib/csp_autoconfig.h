@@ -18,9 +18,9 @@
 #define CSP_RDP_MAX_WINDOW 5
 #define CSP_RTABLE_SIZE 10
 #define CSP_USE_DEDUP 1
-#define CSP_USE_HMAC 1
+#define CSP_USE_HMAC 0
 #define CSP_USE_PROMISC 1
-#define CSP_USE_RDP 1
+#define CSP_USE_RDP 0
 
 
 // Custom manual config

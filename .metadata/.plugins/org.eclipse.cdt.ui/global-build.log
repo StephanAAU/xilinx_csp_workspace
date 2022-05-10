@@ -1,6 +1,6 @@
 Nothing to build in platform 'csptest'
 
-13:28:22 **** Incremental Build of configuration Debug for project test ****
+09:24:16 **** Incremental Build of configuration Debug for project test ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -15,47 +15,57 @@ In file included from ../src/main.c:26:
       | ^~~~~~~~~~~~~~~~~~~
 ../src/can_driver.h:20:1: warning: type defaults to 'int' in declaration of 'csp_driver_can_init' [-Wimplicit-int]
 ../src/main.c: In function 'main':
-../src/main.c:52:2: warning: implicit declaration of function 'csp_iface_can_init'; did you mean 'csp_driver_can_init'? [-Wimplicit-function-declaration]
-   52 |  csp_iface_can_init(0x1c3f, 0, 500000);
+../src/main.c:52:2: warning: implicit declaration of function 'csp_conn_init'; did you mean 'csp_conn_dst'? [-Wimplicit-function-declaration]
+   52 |  csp_conn_init();
+      |  ^~~~~~~~~~~~~
+      |  csp_conn_dst
+../src/main.c:54:2: warning: implicit declaration of function 'csp_iface_can_init'; did you mean 'csp_driver_can_init'? [-Wimplicit-function-declaration]
+   54 |  csp_iface_can_init(0x1c3f, 8, 500000);
       |  ^~~~~~~~~~~~~~~~~~
       |  csp_driver_can_init
-../src/main.c:67:2: warning: "/*" within comment [-Wcomment]
-   67 |  /* Intialize the interface of the can device*/
+../src/main.c:70:2: warning: "/*" within comment [-Wcomment]
+   70 |  /* Intialize the interface of the can device*/
       |   
 ../src/main.c:43:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
    43 |  int Status;
       |      ^~~~~~
 ../src/main.c: In function 'vIdleTask':
-../src/main.c:102:11: warning: format '%x' expects argument of type 'unsigned int *', but argument 2 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
-  102 |   scanf("%x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
-      |          ~^            ~~~~~~~~~~~~~~
-      |           |            |
-      |           |            uint8_t * {aka unsigned char *}
-      |           unsigned int *
-      |          %hhx
-../src/main.c:102:14: warning: format '%x' expects argument of type 'unsigned int *', but argument 3 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
-  102 |   scanf("%x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
-      |             ~^                         ~~~~~~~~~~~~~~
-      |              |                         |
-      |              unsigned int *            uint8_t * {aka unsigned char *}
-      |             %hhx
-../src/main.c:102:17: warning: format '%x' expects argument of type 'unsigned int *', but argument 4 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
-  102 |   scanf("%x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
-      |                ~^                                      ~~~~~~~~~~~~~~
-      |                 |                                      |
-      |                 unsigned int *                         uint8_t * {aka unsigned char *}
-      |                %hhx
-../src/main.c:102:20: warning: format '%x' expects argument of type 'unsigned int *', but argument 5 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
-  102 |   scanf("%x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
-      |                   ~^                                                   ~~~~~~~~~~~~~~
-      |                    |                                                   |
-      |                    unsigned int *                                      uint8_t * {aka unsigned char *}
-      |                   %hhx
-../src/main.c:112:3: warning: implicit declaration of function 'cspSender' [-Wimplicit-function-declaration]
-  112 |   cspSender(dataToSend, 4, 0x1c1f, 0x0f, 0x0f, 0x1d);
-      |   ^~~~~~~~~
-../src/main.c:90:14: warning: unused variable 'inputQueue' [-Wunused-variable]
-   90 |  csp_qfifo_t inputQueue;
+../src/main.c:114:13: warning: format '%x' expects argument of type 'unsigned int *', but argument 2 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+  114 |    scanf(" %x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
+      |            ~^            ~~~~~~~~~~~~~~
+      |             |            |
+      |             |            uint8_t * {aka unsigned char *}
+      |             unsigned int *
+      |            %hhx
+../src/main.c:114:16: warning: format '%x' expects argument of type 'unsigned int *', but argument 3 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+  114 |    scanf(" %x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
+      |               ~^                         ~~~~~~~~~~~~~~
+      |                |                         |
+      |                unsigned int *            uint8_t * {aka unsigned char *}
+      |               %hhx
+../src/main.c:114:19: warning: format '%x' expects argument of type 'unsigned int *', but argument 4 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+  114 |    scanf(" %x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
+      |                  ~^                                      ~~~~~~~~~~~~~~
+      |                   |                                      |
+      |                   unsigned int *                         uint8_t * {aka unsigned char *}
+      |                  %hhx
+../src/main.c:114:22: warning: format '%x' expects argument of type 'unsigned int *', but argument 5 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+  114 |    scanf(" %x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
+      |                     ~^                                                   ~~~~~~~~~~~~~~
+      |                      |                                                   |
+      |                      unsigned int *                                      uint8_t * {aka unsigned char *}
+      |                     %hhx
+../src/main.c:115:4: warning: implicit declaration of function 'cspSender' [-Wimplicit-function-declaration]
+  115 |    cspSender(dataToSend, 4, 0x1c1f, 0x0f, 0x0f, 0x1d);
+      |    ^~~~~~~~~
+../src/main.c:106:11: warning: unused variable 'port' [-Wunused-variable]
+  106 |   uint8_t port;
+      |           ^~~~
+../src/main.c:105:11: warning: unused variable 'length' [-Wunused-variable]
+  105 |   uint8_t length;
+      |           ^~~~~~
+../src/main.c:93:14: warning: unused variable 'inputQueue' [-Wunused-variable]
+   93 |  csp_qfifo_t inputQueue;
       |              ^~~~~~~~~~
 In file included from ../src/main.c:26:
 ../src/main.c: At top level:
@@ -69,19 +79,19 @@ In file included from ../src/main.c:26:
 ' '
 'Building target: test.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -LC:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bsplib/lib -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -o "test.elf"  ./src/can_driver.o ./src/csp_hook_xil.o ./src/main.o ./src/staticrtos.o  ./lib/csp/src/interfaces/csp_if_can.o ./lib/csp/src/interfaces/csp_if_can_pbuf.o ./lib/csp/src/interfaces/csp_if_i2c.o ./lib/csp/src/interfaces/csp_if_lo.o ./lib/csp/src/interfaces/csp_if_tun.o ./lib/csp/src/interfaces/csp_if_zmqhub.o  ./lib/csp/src/crypto/csp_hmac.o ./lib/csp/src/crypto/csp_sha1.o  ./lib/csp/src/arch/freertos/csp_clock.o ./lib/csp/src/arch/freertos/csp_queue.o ./lib/csp/src/arch/freertos/csp_semaphore.o ./lib/csp/src/arch/freertos/csp_system.o ./lib/csp/src/arch/freertos/csp_time.o  ./lib/csp/src/csp_bridge.o ./lib/csp/src/csp_buffer.o ./lib/csp/src/csp_conn.o ./lib/csp/src/csp_crc32.o ./lib/csp/src/csp_debug.o ./lib/csp/src/csp_dedup.o ./lib/csp/src/csp_hex_dump.o ./lib/csp/src/csp_id.o ./lib/csp/src/csp_iflist.o ./lib/csp/src/csp_init.o ./lib/csp/src/csp_io.o ./lib/csp/src/csp_port.o ./lib/csp/src/csp_promisc.o ./lib/csp/src/csp_qfifo.o ./lib/csp/src/csp_rdp.o ./lib/csp/src/csp_rdp_queue.o ./lib/csp/src/csp_route.o ./lib/csp/src/csp_rtable_cidr.o ./lib/csp/src/csp_rtable_stdio.o ./lib/csp/src/csp_service_handler.o ./lib/csp/src/csp_services.o ./lib/csp/src/csp_sfp.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -LC:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bsplib/lib -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -o "test.elf"  ./src/can_driver.o ./src/csp_hook_xil.o ./src/main.o ./src/staticrtos.o  ./lib/csp/src/interfaces/csp_if_can.o ./lib/csp/src/interfaces/csp_if_can_pbuf.o ./lib/csp/src/interfaces/csp_if_i2c.o ./lib/csp/src/interfaces/csp_if_lo.o ./lib/csp/src/interfaces/csp_if_tun.o ./lib/csp/src/interfaces/csp_if_zmqhub.o  ./lib/csp/src/crypto/csp_hmac.o ./lib/csp/src/crypto/csp_sha1.o  ./lib/csp/src/arch/freertos/csp_clock.o ./lib/csp/src/arch/freertos/csp_queue.o ./lib/csp/src/arch/freertos/csp_semaphore.o ./lib/csp/src/arch/freertos/csp_system.o ./lib/csp/src/arch/freertos/csp_time.o  ./lib/csp/src/csp_bridge.o ./lib/csp/src/csp_buffer.o ./lib/csp/src/csp_conn.o ./lib/csp/src/csp_crc32.o ./lib/csp/src/csp_debug.o ./lib/csp/src/csp_dedup.o ./lib/csp/src/csp_hex_dump.o ./lib/csp/src/csp_id.o ./lib/csp/src/csp_iflist.o ./lib/csp/src/csp_init.o ./lib/csp/src/csp_io.o ./lib/csp/src/csp_port.o ./lib/csp/src/csp_promisc.o ./lib/csp/src/csp_qfifo.o ./lib/csp/src/csp_rdp.o ./lib/csp/src/csp_rdp_queue.o ./lib/csp/src/csp_route.o ./lib/csp/src/csp_rtable_cidr.o ./lib/csp/src/csp_rtable_stdio.o ./lib/csp/src/csp_service_handler.o ./lib/csp/src/csp_services.o ./lib/csp/src/csp_sfp.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
 'Finished building target: test.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 185868	  37328	  92768	 315964	  4d23c	test.elf
+ 170420	   8000	  92768	 271188	  42354	test.elf
 'Finished building: test.elf.size'
 ' '
-13:28:27 **** Incremental Build of configuration Debug for project test_system ****
+09:24:21 **** Incremental Build of configuration Debug for project test_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 52926 C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/export/csptest/csptest.xpfm freertos10_xilinx_domain C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test_system/Debug/system.bif
+generate_system_bif.bat 55852 C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/export/csptest/csptest.xpfm freertos10_xilinx_domain C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test_system/Debug/system.bif
 sdcard_gen --xpfm C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/export/csptest/csptest.xpfm --sys_config csptest --bif C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test_system/Debug/system.bif --bitstream C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test/_ide/bitstream/zsys_wrapper.bit --elf C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test/Debug/test.elf,ps7_cortexa9_0
 creating BOOT.BIN using C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test/_ide/bitstream/zsys_wrapper.bit
 Running C:/Xilinx/Vitis/2021.2/bin/bootgen  -image C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/test_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

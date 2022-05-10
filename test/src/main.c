@@ -47,10 +47,13 @@ int main( void )
 
 	csp_buffer_init();
 
-	csp_qfifo_init(); // Seems to make it work ???
+	csp_qfifo_init();
 
-	csp_iface_can_init(0x1c3f, 0, 500000);
+	csp_conn_init();
 
+	csp_iface_can_init(0x1c3f, 8, 500000);
+
+	//setUpIntialRoutes();
 
 	//xilSendLongCFPFrame(0x1C3B, 0x0F, 0x0F, 0x1D, &Test);
 
@@ -97,20 +100,38 @@ static void vIdleTask( void *pvParameters )
 		vTaskDelay( x1second );
 		xil_printf("%d..\r\n", cntr);
 		cntr++;
-		uint8_t dataToSend[4] = {0,0,0,0};
+		uint8_t dataToSend[2] = {0,0};
 
-		scanf("%x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
+		uint8_t length;
+		uint8_t port;
+		xil_printf("Send command to CAMSAT (1) or CSP request to CAMSAT (2)\n \r");
 
-		/*
-		if (csp_qfifo_read(&inputQueue) == 0){
-			xil_printf("There was something to read");
+		char choice;
 
-		} else{
-			xil_printf("qfifo nothing to read");
-		}*/
+		scanf("%c", &choice);
 
-		cspSender(dataToSend, 4, 0x1c1f, 0x0f, 0x0f, 0x1d);
+		if (choice == '1'){
+			scanf(" %x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
+			cspSender(dataToSend, 4, 0x1c1f, 0x0f, 0x0f, 0x1d);
+		} else if(choice == '2'){
+			//xil_printf("Specify port \n \r");
+
+			//scanf("%x", &port);
+			//xil_printf("Specify length \n \r");
+
+			//scanf("%d", &length);
+			//xil_printf("Write the data to be sent\n \r");
+			//scanf(" %x %x %x %x", &dataToSend[0], &dataToSend[1], &dataToSend[2], &dataToSend[3]);
+			dataToSend[0] = 0x00;
+			dataToSend[1] = 0x03;
+			cspSender(dataToSend, 2, 0x1c1f, 0x00, 0x00, 0x00);
+		}
+
+
+
 
 	}
 }
+
+
 

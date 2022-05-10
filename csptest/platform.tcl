@@ -25,3 +25,5 @@ platform generate
 platform generate -domains freertos10_xilinx_domain 
 platform generate
 platform generate
+platform generate
+platform generate
