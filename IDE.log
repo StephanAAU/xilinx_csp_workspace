@@ -6569,3 +6569,11 @@ con
 
 09:38:35 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_cam_test\test_system\_ide\scripts\jtag.tcl'
 09:58:22 INFO  : Disconnected from the channel tcfchan#5.
+10:03:38 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\temp_xsdb_launch_script.tcl
+10:03:45 INFO  : XSCT server has started successfully.
+10:03:45 INFO  : plnx-install-location is set to ''
+10:03:45 INFO  : Successfully done setting XSCT server connection channel  
+10:03:45 INFO  : Successfully done setting workspace for the tool. 
+10:03:47 INFO  : Platform repository initialization has completed.
+10:03:47 INFO  : Registering command handlers for Vitis TCF services
+10:03:48 INFO  : Successfully done query RDI_DATADIR 

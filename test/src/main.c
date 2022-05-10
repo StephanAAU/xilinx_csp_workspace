@@ -70,6 +70,8 @@ int main( void )
 
 	csp_qfifo_init(); // Seems to make it work ???
 
+	csp_conn_init();
+
 	csp_iface_can_init(0x1C1F, 8, 500000);
 
 

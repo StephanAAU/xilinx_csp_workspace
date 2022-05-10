@@ -627,47 +627,53 @@ void serviceToDo (csp_packet_t *receivedPacket){
 
 int cspSender(uint8_t* dataToSend, uint8_t dataLength, uint16_t destination, uint8_t sourceP, uint8_t destP,
 		uint8_t cspFlag){
+	int cspSender(uint8_t* dataToSend, uint8_t dataLength, uint16_t destination, uint8_t sourceP, uint8_t destP,
+			uint8_t cspFlag){
 
-	// Initiate packet
-	csp_packet_t * Packet;
 
-	// Create it in pbuf
-	Packet = csp_can_pbuf_new(&xilCanInt.ifdata, 5, 0);
+		// Initiate packet
+		csp_packet_t * Packet;
 
-	// If it did not create a pbuf return with error.
-	if (Packet == NULL){
-		return CSP_DBG_CAN_PBUF_NO_FIND;
+		// Create it in pbuf
+		Packet = csp_can_pbuf_new(&xilCanInt.ifdata, 5, 0);
+
+		// If it did not create a pbuf return with error.
+		if (Packet == NULL){
+			return CSP_DBG_CAN_PBUF_NO_FIND;
+		}
+
+		// Check for overflow and return error should it happen
+		if (dataLength > xilCanInt.interface.mtu){
+			return CSP_DBG_CAN_ERR_TX_OVF;
+		}
+
+		// Packet data length.
+		Packet->length = dataLength;
+
+
+		// Append the data to the packet.
+		int i;
+
+		for (i = 0 ; i < dataLength ; i++){
+			Packet->data[i] = dataToSend[i];
+		}
+
+		// ID and neccesary headers.
+		Packet->id.dport = destP;
+		Packet->id.sport = sourceP;
+		Packet->id.dst = destination;
+		Packet->id.src = xilCanInt.interface.addr;
+		Packet->id.flags = cspFlag;
+		Packet->id.pri = 0x0;
+
+		csp_conn_t * CSPConnect = csp_connect(0x00, destination, destP, CSP_MAX_TIMEOUT,0);
+
+
+		// Call the csp tx function through return.
+		csp_send(CSPConnect, Packet);
+
+		return 1;
 	}
-
-
-
-	// Check for overflow and return error should it happen
-	if (dataLength > xilCanInt.interface.mtu){
-		return CSP_DBG_CAN_ERR_TX_OVF;
-	}
-
-	// Packet data length.
-	Packet->length = dataLength;
-
-
-	// Append the data to the packet.
-	int i;
-
-	for (i = 0 ; i < dataLength ; i++){
-		Packet->data[i] = dataToSend[i];
-	}
-
-	// ID and neccesary headers.
-	Packet->id.dport = destP;
-	Packet->id.sport = sourceP;
-	Packet->id.dst = destination;
-	Packet->id.src = xilCanInt.interface.addr;
-	Packet->id.flags = cspFlag;
-	Packet->id.pri = 0x0;
-
-	// Call the csp tx function through return.
-	return csp_can2_tx(&xilCanInt.interface, 1, Packet);
-
 }
 
 
