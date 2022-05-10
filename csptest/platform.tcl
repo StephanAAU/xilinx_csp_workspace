@@ -37,3 +37,4 @@ platform generate -domains freertos10_xilinx_domain,zynq_fsbl
 platform generate
 platform generate
 platform generate -domains freertos10_xilinx_domain,zynq_fsbl 
+platform generate -domains freertos10_xilinx_domain,zynq_fsbl 

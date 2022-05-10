@@ -1,6 +1,6 @@
-10:45:28 **** Incremental Build of configuration Debug for project test_system ****
+13:46:04 **** Incremental Build of configuration Debug for project test_system ****
 make all 
 Generate SD card image option is not selected
 
-10:45:28 Build Finished (took 197ms)
+13:46:05 Build Finished (took 486ms)
 

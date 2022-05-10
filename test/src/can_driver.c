@@ -627,8 +627,7 @@ void serviceToDo (csp_packet_t *receivedPacket){
 
 int cspSender(uint8_t* dataToSend, uint8_t dataLength, uint16_t destination, uint8_t sourceP, uint8_t destP,
 		uint8_t cspFlag){
-	int cspSender(uint8_t* dataToSend, uint8_t dataLength, uint16_t destination, uint8_t sourceP, uint8_t destP,
-			uint8_t cspFlag){
+
 
 
 		// Initiate packet
@@ -673,7 +672,7 @@ int cspSender(uint8_t* dataToSend, uint8_t dataLength, uint16_t destination, uin
 		csp_send(CSPConnect, Packet);
 
 		return 1;
-	}
+
 }
 
 

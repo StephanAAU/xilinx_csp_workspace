@@ -6722,3 +6722,14 @@ con
 
 13:18:30 INFO  : Launch script is exported to file 'C:\School\Vivado\ZynqDemoRemake\workspace_csp_cam_test\test_system\_ide\scripts\jtag.tcl'
 13:36:35 INFO  : Disconnected from the channel tcfchan#3.
+13:43:42 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\XilinxStuuf\SatCamServer\xilinx_csp_workspace\temp_xsdb_launch_script.tcl
+13:43:49 INFO  : XSCT server has started successfully.
+13:43:49 INFO  : Platform repository initialization has completed.
+13:43:49 INFO  : Registering command handlers for Vitis TCF services
+13:43:50 INFO  : Successfully done setting XSCT server connection channel  
+13:43:50 INFO  : plnx-install-location is set to ''
+13:43:50 INFO  : Successfully done query RDI_DATADIR 
+13:43:50 INFO  : Successfully done setting workspace for the tool. 
+13:45:24 INFO  : Result from executing command 'getProjects': csptest
+13:45:24 INFO  : Result from executing command 'getPlatforms': csptest|C:/XilinxStuuf/SatCamServer/xilinx_csp_workspace/csptest/export/csptest/csptest.xpfm;csptest|C:/XilinxStuuf/StephanTheGit/xilinx_csp_workspace/csptest/export/csptest/csptest.xpfm
+13:45:26 INFO  : Checking for BSP changes to sync application flags for project 'test'...
