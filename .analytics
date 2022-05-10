@@ -604,3 +604,9 @@ timestamp=[2022-05-10 09:38:18], mode=BUILD, duration=0:00:00.144, duration_ms=1
 timestamp=[2022-05-10 10:03:43], mode=WORKBENCH_START, duration=0:00:15.572, duration_ms=15572, data={}
 timestamp=[2022-05-10 10:03:46], mode=WORKBENCH_UI_INIT, duration=0:00:02.601, duration_ms=2601, data={editors_count=11, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,csptest,test,test_system}
 timestamp=[2022-05-10 10:03:47], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.366, duration_ms=366, data={}
+timestamp=[2022-05-10 10:44:25], mode=WORKBENCH_START, duration=0:00:11.565, duration_ms=11565, data={}
+timestamp=[2022-05-10 10:44:26], mode=WORKBENCH_UI_INIT, duration=0:00:00.929, duration_ms=929, data={editors_count=8, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,csptest,test,test_system}
+timestamp=[2022-05-10 10:44:28], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.291, duration_ms=291, data={}
+timestamp=[2022-05-10 10:45:21], mode=PLATFORM_GENERATION, duration=0:00:27.507, duration_ms=27507, data={name=csptest}
+timestamp=[2022-05-10 10:45:28], mode=BUILD, duration=0:00:03.131, duration_ms=3131, data={name=test, configuration=Debug, clean_build=false}
+timestamp=[2022-05-10 10:45:28], mode=BUILD, duration=0:00:00.214, duration_ms=214, data={name=test_system, configuration=Debug, clean_build=false}

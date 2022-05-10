@@ -178,7 +178,7 @@ static void vCameraTask ( void *pvParameters ) {
 					xil_printf("\r\n ..Starting image process.. \r\n");
 
 					// Tell on CSP we are done.
-						uint8_t stuffToSend[2] = {0x1, 0xF};
+					uint8_t stuffToSend[2] = {0x1, 0xF};
 					cspSender(stuffToSend, 2, 0x1C3F, 0xF, 0xF, 0x1D);
 
 

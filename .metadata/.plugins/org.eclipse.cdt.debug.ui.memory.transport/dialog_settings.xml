@@ -2,9 +2,9 @@
 <section name="Workbench">
 	<section name="EXPORT_DIALOG">
 		<item key="Start" value="0x138040"/>
-		<item key="End" value="0x181206"/>
+		<item key="End" value="0x1516ff"/>
 		<item key="Initial address" value="0x138040"/>
-		<item key="File" value="C:\Users\Bruger\Documents\Universitet\4. Semester\Semesterprojekt\PythonScripts\rgba-png\billedeafJDN.bin"/>
+		<item key="File" value="C:\Users\Bruger\Documents\Universitet\4. Semester\Semesterprojekt\PythonScripts\AcceptTest\Macaw.bin"/>
 		<item key="SELECTED_EXPORTER" value="rawbinary"/>
 	</section>
 </section>
