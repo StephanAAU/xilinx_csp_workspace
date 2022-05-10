@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="csp_can2_tx"/>
+		<item key="selection" value="csp_conf"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="csp_conf"/>
+			<item value="for(size_t"/>
+			<item value="bitPosInOutString"/>
 			<item value="csp_can2_tx"/>
 			<item value="csp_can_tx"/>
 			<item value="recvHandl"/>
@@ -20,9 +23,6 @@
 			<item value="acceptance"/>
 			<item value="XCanPs_AcceptFilterSet"/>
 			<item value="filter"/>
-			<item value="enable"/>
-			<item value="config"/>
-			<item value="recvHandler"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Packet"/>

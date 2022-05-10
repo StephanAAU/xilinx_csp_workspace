@@ -1,4 +1,4 @@
-11:44:51 **** Incremental Build of configuration Debug for project test ****
+13:39:50 **** Incremental Build of configuration Debug for project test ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -7,16 +7,12 @@ make --no-print-directory main-build
 'Building file: ../src/can_driver.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -IC:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test\lib" -I"C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test\lib\csp\include" -c -fmessage-length=0 -MT"src/can_driver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/can_driver.d" -MT"src/can_driver.o" -o "src/can_driver.o" "../src/can_driver.c"
-../src/can_driver.c: In function 'csp_iface_can_init':
-../src/can_driver.c:588:27: warning: assignment to 'csp_can_driver_tx_t' {aka 'int (*)(void *, long unsigned int,  const unsigned char *, unsigned char)'} from incompatible pointer type 'void (*)(csp_iface_t *, uint32_t,  uint8_t *, uint8_t)' {aka 'void (*)(struct csp_iface_s *, long unsigned int,  unsigned char *, unsigned char)'} [-Wincompatible-pointer-types]
-  588 |  xilCanInt.ifdata.tx_func = canHopper;
-      |                           ^
-../src/can_driver.c: In function 'cspSender':
-../src/can_driver.c:666:9: warning: implicit declaration of function 'csp_can2_tx'; did you mean 'csp_can_tx'? [-Wimplicit-function-declaration]
-  666 |  return csp_can2_tx(&xilCanInt.interface, 1, Packet);
-      |         ^~~~~~~~~~~
-      |         csp_can_tx
 'Finished building: ../src/can_driver.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -IC:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/export/csptest/sw/csptest/freertos10_xilinx_domain/bspinclude/include -I"C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test\lib" -I"C:\School\Vivado\ZynqDemoRemake\workspace_csp_test\test\lib\csp\include" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
 ' '
 'Building target: test.elf'
 'Invoking: ARM v7 gcc linker'
@@ -26,9 +22,9 @@ arm-none-eabi-gcc -LC:/School/Vivado/ZynqDemoRemake/workspace_csp_test/csptest/e
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size test.elf  |tee "test.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 221564	   9152	24981344	25212060	180b49c	test.elf
+ 205452	   8600	24981328	25195380	1807374	test.elf
 'Finished building: test.elf.size'
 ' '
 
-11:44:54 Build Finished (took 2s.529ms)
+13:39:52 Build Finished (took 2s.390ms)
 

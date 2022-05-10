@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="EXPORT_DIALOG">
-		<item key="Start" value="0x13c1cc"/>
-		<item key="End" value="0x9251cc"/>
-		<item key="Initial address" value="0x13c1cc"/>
-		<item key="File" value="C:\Users\Bruger\Documents\Universitet\4. Semester\Semesterprojekt\PythonScripts\rgba-png\csp_test.bin"/>
+		<item key="Start" value="0x138040"/>
+		<item key="End" value="0x181206"/>
+		<item key="Initial address" value="0x138040"/>
+		<item key="File" value="C:\Users\Bruger\Documents\Universitet\4. Semester\Semesterprojekt\PythonScripts\rgba-png\billedeafJDN.bin"/>
 		<item key="SELECTED_EXPORTER" value="rawbinary"/>
 	</section>
 </section>

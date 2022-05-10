@@ -35,6 +35,10 @@ unsigned char CompressionBuffer[1080*1920*4];
 // CAN includes and defines
 #include "can_driver.h"
 
+// Image compression defines
+#include "SatCamImage.h"
+extern size_t bitPosInOutString;
+
 // Application stuff starts here
 #define DELAY_1_SECOND		1000UL
 
@@ -121,23 +125,30 @@ static void vIdleTask( void *pvParameters )
 
 	const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
 	int cntr = 0;
+
 	for( ;; )
 	{
 		/* Delay for 1 second. */
 		vTaskDelay( x1second );
 		cntr++;
-		if (csp_qfifo_read(&inputQueue) == 0){
-			if (inputQueue.packet->id.dport >= 0 && inputQueue.packet->id.dport <= 6){
+		xil_printf("%d..\r\n", cntr);
+
+		if (csp_qfifo_read(&inputQueue) == 0) {
+
+			if (inputQueue.packet->id.dport >= 0 && inputQueue.packet->id.dport <= 6) {
 				serviceToDo(inputQueue.packet);
 			} else {
-			if (inputQueue.packet->data[0] == 0x1) {
+
+				if (inputQueue.packet->data[0] == 0x1) {
+
 					if (inputQueue.packet->data[1] == 0x1) {
 						xSemaphoreGive( xCam_TakePicture );
 					}
+
 				}
+
 			}
-		} else{
-			xil_printf("%d..\r\n", cntr);
+
 		}
 	}
 }
@@ -159,21 +170,51 @@ static void vCameraTask ( void *pvParameters ) {
 				{
 					/* We were able to obtain the semaphore and can now access the
 					shared resource. */
+					TickType_t starttime = 0, stoptime = 0, tickstotal = 0;
 
+					starttime = xTaskGetTickCount();
 					xil_printf("\r\n ..Starting image process.. \r\n");
 
+					// Tell on CSP we are done.
+						uint8_t stuffToSend[2] = {0x1, 0xF};
+					cspSender(stuffToSend, 2, 0x1C3F, 0xF, 0xF, 0x1D);
 
+
+					xil_printf("Copying to compression buffer.. \r\n"); // Serial debug message.
 					gpio_toggle(71); 	// Status pin used to signal SW running state.
 					Xil_DCacheFlush();	// Flush cache to ensure cached is written to memory.
 					memcpy(&CompressionBuffer, VideoBuffer, 1920*1080*4); // Width * Height * (RGBA).
-					gpio_toggle(71); // Status pin used to signal SW running state.
-					xil_printf("Copied to compression buffer.. \r\n"); // Serial debug message.
+
+
+					xil_printf("Starting compression.. \r\n"); // Serial debug message.
+					ReadDataToBuffer((char *)CompressionBuffer, MID);
+					xil_printf("Calculating DCT.. \r\n"); // Serial debug message.
+					DCTToBuffers(MID);
+					xil_printf("Calculating quantization.. \r\n"); // Serial debug message.
+					QuantBuffers(MID);
+					xil_printf("Calculating diff.. \r\n");
+					DiffDCBuffers(MID);
+					xil_printf("Calculating zigzag.. \r\n");
+					ZigzagBuffers(MID);
+					xil_printf("Calculating huffman.. \r\n");
+					HuffmanEncode(MID);
+					xil_printf("Creating output string.. \r\n");
+
+					while(!(bitPosInOutString%8 == 0)) {
+						AddToBitString(1, 1, 0);
+					}
 
 					// Tell on CSP we are done.
-					uint8_t stuffToSend[2] = {0x1, 0xF};
+					stuffToSend[0] = 0x1;
+					stuffToSend[1] = 0xA;
 					cspSender(stuffToSend, 2, 0x1C3F, 0xF, 0xF, 0x1D);
 
+					stoptime = xTaskGetTickCount();
+
+					gpio_toggle(71); // Status pin used to signal SW running state.
 					xil_printf("\r\n ..Image process done.. \r\n");
+					tickstotal = stoptime - starttime;
+					xil_printf("Took %d ticks to execute (%d ms).. \r\n", tickstotal, tickstotal*portTICK_PERIOD_MS);
 				}
 				else
 				{
@@ -188,7 +229,7 @@ static void vCameraTask ( void *pvParameters ) {
 			xil_printf("\r\nCamera is not configured.. \r\n");
 		}
 
-		vTaskDelay( pdMS_TO_TICKS(1000) );
+		vTaskDelay( pdMS_TO_TICKS(950) );
 	}
 
 }
