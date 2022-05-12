@@ -39,6 +39,9 @@ unsigned char CompressionBuffer[1080*1920*4];
 #include "SatCamImage.h"
 extern size_t bitPosInOutString;
 
+// Log defines
+#include "logSendDefines.h"
+
 // Application stuff starts here
 #define DELAY_1_SECOND		1000UL
 
@@ -72,8 +75,9 @@ int main( void )
 
 	csp_conn_init();
 
-	csp_iface_can_init(0x1C1F, 8, 500000);
+	csp_iface_can_init(0x1C1F, 8, 500000, 0x1c1b);
 
+	sendToLog(bootUpInMain);
 
 	//xilSendLongCFPFrame(0x1C3B, 0x0F, 0x0F, 0x1D, &Test);
 
@@ -181,6 +185,8 @@ static void vCameraTask ( void *pvParameters ) {
 					uint8_t stuffToSend[2] = {0x1, 0xF};
 					cspSender(stuffToSend, 2, 0x1C3F, 0xF, 0xF, 0x1D);
 
+					// Tell log we have begun taking a picture
+					sendToLog(begunTakingPicture);
 
 					xil_printf("Copying to compression buffer.. \r\n"); // Serial debug message.
 					gpio_toggle(71); 	// Status pin used to signal SW running state.
@@ -210,6 +216,9 @@ static void vCameraTask ( void *pvParameters ) {
 					stuffToSend[0] = 0x1;
 					stuffToSend[1] = 0xA;
 					cspSender(stuffToSend, 2, 0x1C3F, 0xF, 0xF, 0x1D);
+
+					// Tell log we are done taking a picture
+					sendToLog(doneTakingPicture);
 
 					stoptime = xTaskGetTickCount();
 

@@ -86,6 +86,9 @@ volatile static int LoopbackError;	/* Asynchronous error occurred */
 volatile static int RecvDone;		/* Received a frame */
 volatile static int SendDone;		/* Frame was sent successfully */
 
+/* Log address and log counter*/
+uint16_t logAddress;
+uint32_t logCounter = 0;
 
 /* Interface definition and addresses*/
 struct xilCan_d{
@@ -254,8 +257,9 @@ static void SendHandler(void *CallBackRef)
 	/*
 	 * The frame was sent successfully. Notify the task context.
 	 */
+
+	// Add that the interface has sent a frame succesfully.
 	xilCanInt.interface.tx++;
-	SendDone = TRUE;
 }
 
 
@@ -276,33 +280,31 @@ static void SendHandler(void *CallBackRef)
 ******************************************************************************/
 static void RecvHandler(void *CallBackRef)
 {
+	// Read the data out of the register and into the RxFrame
 	XCanPs_Recv(&CanInstance, RxFrame);
 
 	xil_printf("%x %x %x %x \n \r", RxFrame[0], RxFrame[1], RxFrame[2], RxFrame[3]);
 
 	// The RxFrame needs to have the RTR and ID ext removed.
-
 	RxFrame[0] = ((RxFrame[0] & 0xffe00000)>>3)|((RxFrame[0] &0xffffe)>>1);
 
 	xil_printf("%x \n \r", RxFrame[0]);
 
+	// Map the data from the CAN frame into an 8bit array.
 	u8 (*messageData)[8] = (void*) &RxFrame[2];
-
-	//messageData[0] =(RxFrame[2]&0xFF000000)>>24;
-
-	//messageData[1] = (u8) *(RxFrame+sizeof(u32)*2);
-
 
 	xil_printf("%x %x %x %x \n \r",(*messageData)[4], (*messageData)[5], (*messageData)[6], (*messageData)[7]);
 
 
 	xil_printf("%x %x %x %x \n \r",RxFrame[1] >> XCANPS_DLCR_DLC_SHIFT);
 
-
+	// Indicate that the task is being called through ISR.
 	int TaskWokenFromISR = 1;
 
+	// Call the csp_can_rx that parse the CAN frame into CSP packets.
 	csp_can_rx(&xilCanInt.interface, RxFrame[0], *messageData, RxFrame[1] >> XCANPS_DLCR_DLC_SHIFT, &TaskWokenFromISR); //
 
+	// Indicate that the interface has received more data.
 	xilCanInt.interface.rx++;
 }
 
@@ -574,8 +576,11 @@ int xil_setup_can(void) {
 	return ( CanPsIntrSetup(&xInterruptController, &CanInstance, CAN_DEVICE_ID, CAN_INTR_VEC_ID) );
 }
 
-void csp_iface_can_init(int addr, int netmask, uint32_t bitrate) {
+void csp_iface_can_init(int addr, int netmask, uint32_t bitrate, uint16_t logAddr) {
 
+
+	/*  Define the log address*/
+	logAddress = logAddr;
 
 	xilCanInt.interface.name = "CAN0";
 
@@ -612,13 +617,15 @@ void csp_iface_can_init(int addr, int netmask, uint32_t bitrate) {
 
 void serviceToDo (csp_packet_t *receivedPacket){
 
+	// When receiving a request to do a CSP service check if these are defined.
 	if (receivedPacket->id.dport == 0){
+		// Check if the request is to change the route
 		if (receivedPacket->data[1] == 2 || receivedPacket->data[1] == 7){
 					// do squat, maybe reply not avaiable.
-		} else {
+		} else {// If not actually do somethign
 			csp_service_handler(receivedPacket);
 		}
-	} else {
+	} else { // Do the service handler.
 		csp_service_handler(receivedPacket);
 	}
 
@@ -672,8 +679,27 @@ int cspSender(uint8_t* dataToSend, uint8_t dataLength, uint16_t destination, uin
 		csp_send(CSPConnect, Packet);
 
 		return 1;
-
 }
 
+void sendToLog(uint8_t logMessage){
+	// Make data buffer that the message and counter can be put into
+	uint8_t dataTransformed[4];
 
+	// Put the log message into the last bit
+	dataTransformed[3] = logMessage;
+
+	// Put the counter into the three first bytes, the counter is meant to be 24 bit but is stored as a 32 bit locally.
+	// This is done be masking and shifting to the right.
+	dataTransformed[2] = logCounter&0xFF;
+
+	dataTransformed[1] = (logCounter&0xFF00)>>8;
+
+	dataTransformed[0] = (logCounter&0xFF0000)>>16;
+
+	// Send it through CSP
+	cspSender(dataTransformed, 4, logAddress,0x0A,0x0A,0x00);
+
+	// count of the log counter by one.
+	logCounter++;
+}
 
